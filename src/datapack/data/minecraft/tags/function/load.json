@@ -5,7 +5,7 @@
             "required":false
         },
         {
-            "id": "tp:load",
+            "id": "effect_steal:load",
             "required": false
         }
     ]

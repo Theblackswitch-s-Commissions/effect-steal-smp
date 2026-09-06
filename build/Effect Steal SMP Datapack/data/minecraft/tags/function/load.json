@@ -1,0 +1,13 @@
+{
+  "values": [
+    "#theblackswitch:load",
+    {
+      "id": "#theblackswitch:load",
+      "required": false
+    },
+    {
+      "id": "effect_steal:load",
+      "required": false
+    }
+  ]
+}

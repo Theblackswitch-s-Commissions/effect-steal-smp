@@ -4,18 +4,18 @@
             "libraries/SwitchLib-v2.0.3.zip",
             "src/datapack"
         ],
-        "name": "Template Datapack"
+        "name": "Effect Steal SMP Datapack"
     },
     "resource_pack": {
         "load": ["src/resourcepack"],
-        "name": "Template Resourcepack"
+        "name": "Effect Steal SMP Resourcepack"
     },
     "pipeline": [
         "plugins.aliases",
         "mecha"
     ],
-    "id": "tp",
-    "name": "template",
+    "id": "effect_steal",
+    "name": "effect_steal",
     "description": "",
     "version": "1.0.0a",
     "require": [

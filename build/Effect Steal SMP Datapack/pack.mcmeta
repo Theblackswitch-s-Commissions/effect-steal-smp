@@ -1,0 +1,29 @@
+{
+  "pack": {
+    "min_format": [
+      101,
+      1
+    ],
+    "max_format": [
+      101,
+      1
+    ],
+    "description": "Version: 1.0.0a"
+  },
+  "overlays": {
+    "entries": [
+      {
+        "directory": "backport_26.1.2",
+        "min_format": 0,
+        "max_format": [
+          101,
+          1
+        ],
+        "formats": [
+          0,
+          101
+        ]
+      }
+    ]
+  }
+}
