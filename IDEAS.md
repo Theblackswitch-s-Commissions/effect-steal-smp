@@ -5,7 +5,7 @@
 ___
 New block: alchemy table
 
-kill player => get 5  player heads => Trade the 5 heads for a permanent ==bonus effect== using ==the alchemy table==
+kill player => get player head => Trade the 5 heads for a permanent ==bonus effect== using ==the alchemy table==
 Die yourself => get a random permanent negative effect
 
 

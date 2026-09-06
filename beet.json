@@ -1,7 +1,7 @@
 {
     "data_pack": {
         "load": [
-            "libraries/SwitchLib-v2.0.3.zip",
+            "libraries/SwitchLib-v2.0.5-alpha.zip",
             "src/datapack"
         ],
         "name": "Effect Steal SMP Datapack"
@@ -31,9 +31,14 @@
             },
             {
                 "regex": "__patch__",
-                "replace": "patch-3",
+                "replace": "patch-5",
                 "comment": "The switch lib major version"
             }
-        ]
+        ],
+        "bolt": {
+            "entrypoint": [
+                "effect_steal:rand"
+            ]
+        }
     }
 }
