@@ -1,0 +1,39 @@
+{
+    "data_pack": {
+        "load": [
+            "libraries/SwitchLib-v2.0.3.zip",
+            "src/datapack"
+        ],
+        "name": "Template Datapack"
+    },
+    "resource_pack": {
+        "load": ["src/resourcepack"],
+        "name": "Template Resourcepack"
+    },
+    "pipeline": [
+        "plugins.aliases",
+        "mecha"
+    ],
+    "id": "tp",
+    "name": "template",
+    "description": "",
+    "version": "1.0.0a",
+    "require": [
+        "bolt"
+    ],
+    "output": "build",
+    "meta": {
+        "aliases": [
+            {
+                "regex": "__version__",
+                "replace": "v2.0",
+                "comment": "The switch lib major version"
+            },
+            {
+                "regex": "__patch__",
+                "replace": "patch-3",
+                "comment": "The switch lib major version"
+            }
+        ]
+    }
+}
