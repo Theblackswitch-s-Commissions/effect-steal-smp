@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:any_of",
+	"terms": [
+		{
+			"type": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"es.button_click": 101
+			}
+		},
+        {
+			"type": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"es.button_click": 201
+			}
+		},
+        {
+			"type": "minecraft:entity_scores",
+			"entity": "this",
+			"scores": {
+				"es.button_click": 301
+			}
+		}
+	]
+}

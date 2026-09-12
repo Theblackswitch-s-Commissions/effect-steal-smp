@@ -1,0 +1,48 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:cod_spawn_egg",
+                    "modifier": [
+                        {
+                            "type": "minecraft:set_name",
+                            "name": {"text":"Alchemy Table"},
+                            "target": "item_name"
+                        },
+                        {
+                            "type": "minecraft:set_lore",
+                            "lore": [
+                                [
+                                    {"text":"","italic":false,"color":"white"},
+                                    {"text":"\uE001","font":"effect_steal:main"},
+                                    {"text":" Effect Steal SMP ","color":"blue"},
+                                    {"text":"\uE001","font":"effect_steal:main"}
+                                ],
+                                "",
+                                {"text": "A luxary brewing station, once", "color": "gold", "italic": false},
+                                {"text": "utilized by the leading alchemists.", "color": "gold", "italic": false},
+                                "",
+                                {"text": "Can be used to brew potions", "color": "green", "italic": false},
+                                {"text": "and unlock permanent effects.", "color": "green", "italic": false}
+                            ],
+                            "mode": "replace_all"
+                        },
+                        {
+                            "type": "minecraft:set_components",
+                            "components": {
+                                "minecraft:entity_data": {
+                                    "id": "minecraft:marker",
+                                    "Tags": ["es.place.alchemy_table"]
+                                },
+                                "minecraft:item_model": "effect_steal:block/alchemy_table"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

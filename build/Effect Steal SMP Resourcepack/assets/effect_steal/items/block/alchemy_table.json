@@ -1,0 +1,107 @@
+{
+	"model": {
+		"type": "minecraft:composite",
+		"models": [
+			{
+				"type": "minecraft:model",
+				"model": "effect_steal:block/alchemy_table/main"
+			},
+
+
+
+
+			{
+				"type": "minecraft:select",
+				"property": "minecraft:custom_model_data",
+				"index": 0,
+				"cases": [
+					{
+						"when": "flask_left:potion",
+						"model": {
+							"type": "minecraft:model",
+							"model": "effect_steal:block/alchemy_table/left_potion"
+						}
+					},
+					{
+						"when": "flask_left:empty",
+						"model": {
+							"type": "minecraft:model",
+							"model": "effect_steal:block/alchemy_table/left_empty"
+						}
+					}
+				],
+				"fallback": {
+                    "type": "minecraft:empty"
+                }
+			},
+            {
+				"type": "minecraft:select",
+				"property": "minecraft:custom_model_data",
+				"index": 1,
+				"cases": [
+					{
+						"when": "flask_middle:potion",
+						"model": {
+							"type": "minecraft:model",
+							"model": "effect_steal:block/alchemy_table/middle_potion"
+						}
+					},
+					{
+						"when": "flask_middle:empty",
+						"model": {
+							"type": "minecraft:model",
+							"model": "effect_steal:block/alchemy_table/middle_empty"
+						}
+					}
+				],
+				"fallback": {
+                    "type": "minecraft:empty"
+                }
+			},
+            {
+				"type": "minecraft:select",
+				"property": "minecraft:custom_model_data",
+				"index": 2,
+				"cases": [
+					{
+						"when": "flask_right:potion",
+						"model": {
+							"type": "minecraft:model",
+							"model": "effect_steal:block/alchemy_table/right_potion"
+						}
+					},
+					{
+						"when": "flask_right:empty",
+						"model": {
+							"type": "minecraft:model",
+							"model": "effect_steal:block/alchemy_table/right_empty"
+						}
+					}
+				],
+				"fallback": {
+                    "type": "minecraft:empty"
+                }
+			},
+
+
+
+
+			{
+				"type": "minecraft:select",
+				"property": "minecraft:display_context",
+				"cases": [
+					{
+						"when": "gui",
+						"model": {
+							"type": "minecraft:empty"
+						}
+					}
+				],
+				"fallback": {
+					"type": "minecraft:model",
+					"model": "effect_steal:block/alchemy_table/toppings"
+				}
+			}
+		]
+	}
+}

@@ -1,7 +1,7 @@
 {
     "data_pack": {
         "load": [
-            "libraries/SwitchLib-v2.0.5-alpha.zip",
+            "libraries/SwitchLib-v2.0.5-beta.zip",
             "src/datapack"
         ],
         "name": "Effect Steal SMP Datapack"
@@ -19,7 +19,9 @@
     "description": "",
     "version": "1.0.0a",
     "require": [
-        "bolt"
+        "bolt",
+        "bolt_native_macros",
+        "plugins.add_registries"
     ],
     "output": "build",
     "meta": {
@@ -37,7 +39,7 @@
         ],
         "bolt": {
             "entrypoint": [
-                "effect_steal:rand"
+                "effect_steal:alchemy_table_gui"
             ]
         }
     }

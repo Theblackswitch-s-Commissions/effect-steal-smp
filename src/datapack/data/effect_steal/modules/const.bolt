@@ -1,0 +1,59 @@
+# This file contains constants that are used to generate the pack
+
+
+# -------------------------------
+#  All the info boxes
+# -------------------------------
+
+info_boxes = [
+    "activate/chemical_bliss",
+    "activate/conduit_power",
+    "activate/dolphins_grace",
+    "activate/fire_resistance",
+    "activate/haste",
+    "activate/health_boost",
+    "activate/jump_boost",
+    "activate/master_of_the_evil",
+    "activate/resistance",
+    "activate/speed",
+    "activate/strength",
+
+    "upgrade/chemical_bliss",
+    "upgrade/haste",
+    "upgrade/health_boost",
+    "upgrade/jump_boost",
+    "upgrade/master_of_the_evil",
+    "upgrade/resistance",
+    "upgrade/speed",
+    "upgrade/strength",
+
+    "clear/mining_fatigue",
+    "clear/slowness",
+    "clear/weakness",
+
+    "decrease/mining_fatigue",
+    "decrease/slowness",
+    "decrease/weakness"
+]
+
+# -------------------------------
+#  All the effects                            
+# -------------------------------
+
+effects = [
+    {"id": "chemical_bliss"     , "type": "positive", "max_lvl": 3},
+    {"id": "conduit_power"      , "type": "positive", "max_lvl": 1},
+    {"id": "dolphins_grace"     , "type": "positive", "max_lvl": 1},
+    {"id": "fire_resistance"    , "type": "positive", "max_lvl": 1},
+    {"id": "haste"              , "type": "positive", "max_lvl": -1},
+    {"id": "health_boost"       , "type": "positive", "max_lvl": 3},
+    {"id": "jump_boost"         , "type": "positive", "max_lvl": -1},
+    {"id": "master_of_the_evil" , "type": "positive", "max_lvl": 3},
+    {"id": "resistance"         , "type": "positive", "max_lvl": 2},
+    {"id": "speed"              , "type": "positive", "max_lvl": -1},
+    {"id": "strength"           , "type": "positive", "max_lvl": -1},
+
+    {"id": "mining_fatigue"     , "type": "negative", "max_lvl": -1},
+    {"id": "slowness"           , "type": "negative", "max_lvl": -1},
+    {"id": "weakness"           , "type": "negative", "max_lvl": -1}
+]
