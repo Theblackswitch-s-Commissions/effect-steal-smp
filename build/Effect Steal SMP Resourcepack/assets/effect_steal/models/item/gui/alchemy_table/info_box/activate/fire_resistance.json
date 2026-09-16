@@ -1,6 +1,7 @@
 {
   "textures": {
-    "gui": "effect_steal:item/gui/alchemy_table/info_box/activate/fire_resistance"
+    "gui": "effect_steal:item/gui/alchemy_table/info_box/activate/fire_resistance",
+    "particle": "effect_steal:item/gui/alchemy_table/info_box/activate/fire_resistance"
   },
   "gui_light": "front",
   "elements": [

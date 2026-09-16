@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:filtered",
+	"slot_source": {
+		"type": "minecraft:group",
+		"terms": [
+			{
+				"type": "minecraft:slot_range",
+				"source": "container",
+				"slots": "container.18"
+			},
+			{
+				"type": "minecraft:slot_range",
+				"source": "container",
+				"slots": "container.19"
+			},
+			{
+				"type": "minecraft:slot_range",
+				"source": "container",
+				"slots": "container.20"
+			}
+		]
+	},
+	"item_filter": {
+		"count": {
+			"min": 1
+		}
+	}
+}

@@ -1,0 +1,2 @@
+summon item_display ~ ~ ~ {Tags: ["es.alchemy_table_ingredient", "INIT"], transformation: {left_rotation: [0.0d, 0.0d, 0.0d, 1.0d], right_rotation: [0.0d, 0.0d, 0.0d, 1.0d], translation: [0.0f, 0.0f, 0.0f], scale: [0.5d, 0.5d, 0.5d]}}
+execute rotated as @s as @e[type=item_display, tag=es.alchemy_table_ingredient, tag=INIT, limit=1] run function effect_steal:alchemy_table/ritual/ingredient_display/summon/nested_execute_0

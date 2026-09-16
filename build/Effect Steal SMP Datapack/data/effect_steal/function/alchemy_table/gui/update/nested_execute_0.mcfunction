@@ -1,2 +1,15 @@
-scoreboard players set @s es.button_click 0
-playsound minecraft:block.crafter.fail master @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] ~ ~ ~ 1 0
+scoreboard players set @s es.effect_level 0
+execute if score @s es.selected_effect matches 0 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.chemical_bliss.level
+execute if score @s es.selected_effect matches 1 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.conduit_power.level
+execute if score @s es.selected_effect matches 2 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.dolphins_grace.level
+execute if score @s es.selected_effect matches 3 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.fire_resistance.level
+execute if score @s es.selected_effect matches 4 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.haste.level
+execute if score @s es.selected_effect matches 5 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.health_boost.level
+execute if score @s es.selected_effect matches 6 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.jump_boost.level
+execute if score @s es.selected_effect matches 7 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.master_of_the_evil.level
+execute if score @s es.selected_effect matches 8 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.resistance.level
+execute if score @s es.selected_effect matches 9 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.speed.level
+execute if score @s es.selected_effect matches 10 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.strength.level
+execute if score @s es.selected_effect matches 11 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.mining_fatigue.level
+execute if score @s es.selected_effect matches 12 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.slowness.level
+execute if score @s es.selected_effect matches 13 run return run scoreboard players operation @s es.effect_level = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.weakness.level

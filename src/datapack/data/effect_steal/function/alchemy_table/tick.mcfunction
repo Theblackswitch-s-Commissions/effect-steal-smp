@@ -5,12 +5,24 @@ execute unless block ~ ~ ~ minecraft:barrel run return run function effect_steal
 # Select owner
 scoreboard players operation #search tbs.ID = @s es.owner_id
 
+# Ritual
+execute if entity @s[tag=es.has_ritual] run function effect_steal:alchemy_table/ritual/tick
 
-# Check for any button clicks and stuff
+# Check for any incorrectly inserted items
+function effect_steal:alchemy_table/gui/check_wrong_items
+
+# Check for any button clicks and recipes
 function effect_steal:alchemy_table/gui/check_input
 
-# Update the gui
-function effect_steal:alchemy_table/gui/update
+# Handle hoppers below
+execute if block ~ ~-1 ~ minecraft:hopper run data modify block ~ ~-1 ~ TransferCooldown set value 10000
+
+execute if score #8 tbs.slow_tick matches 1 unless score @s es.brew_progress matches 1..200 run function effect_steal:alchemy_table/automation
+
+# Update the gui if needed
+execute:
+    raw execute if slots block ~ ~ ~ effect_steal:alchemy_table/has_faulty_slot run return run function effect_steal:alchemy_table/gui/update
+    execute if score @s es.button_click matches 1.. run return run function effect_steal:alchemy_table/gui/update
 
 # Handle gui closing
 execute if score @s es.owner_id matches 0.. if block ~ ~ ~ minecraft:barrel[open=false] run function effect_steal:alchemy_table/handle_owner/reset_owner

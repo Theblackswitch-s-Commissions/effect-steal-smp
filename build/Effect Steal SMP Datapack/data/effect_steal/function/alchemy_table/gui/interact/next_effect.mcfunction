@@ -1,2 +1,5 @@
 playsound minecraft:ui.button.click master @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] ~ ~ ~ 0.25 1
 scoreboard players set @s es.button_click 305
+scoreboard players add @s es.selected_effect 1
+execute if score @s es.selected_effect matches 14 run scoreboard players set @s es.selected_effect 0
+function effect_steal:alchemy_table/gui/update

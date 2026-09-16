@@ -1,6 +1,7 @@
 {
   "textures": {
-    "gui": "effect_steal:item/gui/alchemy_table/main"
+    "gui": "effect_steal:item/gui/alchemy_table/main",
+    "particle": "effect_steal:item/gui/alchemy_table/main"
   },
   "gui_light": "front",
   "elements": [

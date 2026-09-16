@@ -1,6 +1,7 @@
 {
   "textures": {
-    "gui": "effect_steal:item/gui/alchemy_table/info_box/upgrade/master_of_the_evil"
+    "gui": "effect_steal:item/gui/alchemy_table/info_box/upgrade/master_of_the_evil",
+    "particle": "effect_steal:item/gui/alchemy_table/info_box/upgrade/master_of_the_evil"
   },
   "gui_light": "front",
   "elements": [

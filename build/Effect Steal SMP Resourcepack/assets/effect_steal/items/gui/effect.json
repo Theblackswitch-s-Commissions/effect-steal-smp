@@ -1,0 +1,268 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 2,
+        "cases": [
+          {
+            "when": "max:true",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/effect/star",
+              "transformation": {
+                "translation": [
+                  0,
+                  0,
+                  0.2
+                ],
+                "left_rotation": [
+                  0,
+                  0,
+                  0,
+                  1.0
+                ],
+                "right_rotation": [
+                  0,
+                  0,
+                  0,
+                  1.0
+                ],
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              }
+            }
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:empty"
+        }
+      },
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 1,
+        "cases": [
+          {
+            "when": "active:true",
+            "model": {
+              "type": "minecraft:select",
+              "property": "minecraft:custom_model_data",
+              "index": 0,
+              "cases": [
+                {
+                  "when": "effect:chemical_bliss",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/chemical_bliss"
+                  }
+                },
+                {
+                  "when": "effect:conduit_power",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/conduit_power"
+                  }
+                },
+                {
+                  "when": "effect:dolphins_grace",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/dolphins_grace"
+                  }
+                },
+                {
+                  "when": "effect:fire_resistance",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/fire_resistance"
+                  }
+                },
+                {
+                  "when": "effect:haste",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/haste"
+                  }
+                },
+                {
+                  "when": "effect:health_boost",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/health_boost"
+                  }
+                },
+                {
+                  "when": "effect:jump_boost",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/jump_boost"
+                  }
+                },
+                {
+                  "when": "effect:master_of_the_evil",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/master_of_the_evil"
+                  }
+                },
+                {
+                  "when": "effect:resistance",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/resistance"
+                  }
+                },
+                {
+                  "when": "effect:speed",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/speed"
+                  }
+                },
+                {
+                  "when": "effect:strength",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/strength"
+                  }
+                },
+                {
+                  "when": "effect:mining_fatigue",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/mining_fatigue"
+                  }
+                },
+                {
+                  "when": "effect:slowness",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/slowness"
+                  }
+                },
+                {
+                  "when": "effect:weakness",
+                  "model": {
+                    "type": "minecraft:model",
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/weakness"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:select",
+          "property": "minecraft:custom_model_data",
+          "index": 0,
+          "cases": [
+            {
+              "when": "effect:chemical_bliss",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/chemical_bliss"
+              }
+            },
+            {
+              "when": "effect:conduit_power",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/conduit_power"
+              }
+            },
+            {
+              "when": "effect:dolphins_grace",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/dolphins_grace"
+              }
+            },
+            {
+              "when": "effect:fire_resistance",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/fire_resistance"
+              }
+            },
+            {
+              "when": "effect:haste",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/haste"
+              }
+            },
+            {
+              "when": "effect:health_boost",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/health_boost"
+              }
+            },
+            {
+              "when": "effect:jump_boost",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/jump_boost"
+              }
+            },
+            {
+              "when": "effect:master_of_the_evil",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/master_of_the_evil"
+              }
+            },
+            {
+              "when": "effect:resistance",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/resistance"
+              }
+            },
+            {
+              "when": "effect:speed",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/speed"
+              }
+            },
+            {
+              "when": "effect:strength",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/strength"
+              }
+            },
+            {
+              "when": "effect:mining_fatigue",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/mining_fatigue"
+              }
+            },
+            {
+              "when": "effect:slowness",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/slowness"
+              }
+            },
+            {
+              "when": "effect:weakness",
+              "model": {
+                "type": "minecraft:model",
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/weakness"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

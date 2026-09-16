@@ -1,6 +1,7 @@
 {
   "textures": {
-    "gui": "effect_steal:item/gui/alchemy_table/info_box/decrease/mining_fatigue"
+    "gui": "effect_steal:item/gui/alchemy_table/info_box/decrease/mining_fatigue",
+    "particle": "effect_steal:item/gui/alchemy_table/info_box/decrease/mining_fatigue"
   },
   "gui_light": "front",
   "elements": [

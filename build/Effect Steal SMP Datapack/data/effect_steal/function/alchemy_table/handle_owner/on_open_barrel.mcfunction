@@ -1,1 +1,0 @@
-execute as @e[type=item_display, tag=es.alchemy_table, tag=!es.has_owner, sort=nearest] at @s positioned ~ ~-0.55 ~ if block ~ ~ ~ minecraft:barrel[open=true] run function effect_steal:alchemy_table/handle_owner/on_open_barrel/nested_execute_0

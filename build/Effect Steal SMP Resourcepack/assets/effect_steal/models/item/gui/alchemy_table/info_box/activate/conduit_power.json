@@ -1,6 +1,7 @@
 {
   "textures": {
-    "gui": "effect_steal:item/gui/alchemy_table/info_box/activate/conduit_power"
+    "gui": "effect_steal:item/gui/alchemy_table/info_box/activate/conduit_power",
+    "particle": "effect_steal:item/gui/alchemy_table/info_box/activate/conduit_power"
   },
   "gui_light": "front",
   "elements": [

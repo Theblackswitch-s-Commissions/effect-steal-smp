@@ -1,6 +1,7 @@
 {
   "textures": {
-    "gui": "effect_steal:item/gui/alchemy_table/recipe_book"
+    "gui": "effect_steal:item/gui/alchemy_table/recipe_book",
+    "particle": "effect_steal:item/gui/alchemy_table/recipe_book"
   },
   "gui_light": "front",
   "elements": [

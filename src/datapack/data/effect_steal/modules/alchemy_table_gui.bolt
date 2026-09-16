@@ -10,7 +10,8 @@ import effect_steal:const as const
 def create_gui_model(name: str):    
     model f"effect_steal:item/gui/alchemy_table/{name}" {
         "textures": {
-            "gui": f"effect_steal:item/gui/alchemy_table/{name}"
+            "gui": f"effect_steal:item/gui/alchemy_table/{name}",
+            "particle": f"effect_steal:item/gui/alchemy_table/{name}"
         },
         "gui_light": "front",
         "elements":[{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[0,0,4,4],"texture":"#gui"}},"rotation":{"origin":[23.364747690452802,-79.09660623917087,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[0,4,4,8],"texture":"#gui"}},"rotation":{"origin":[63.583463627459594,-71.09660623917088,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[0,8,4,12],"texture":"#gui"}},"rotation":{"origin":[103.80217956446636,-63.09660623917087,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[0,12,4,16],"texture":"#gui"}},"rotation":{"origin":[144.02089550147318,-55.09660623917087,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[4,0,8,4],"texture":"#gui"}},"rotation":{"origin":[7.364747690452809,1.340825634842701,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[4,4,8,8],"texture":"#gui"}},"rotation":{"origin":[47.58346362745959,9.340825634842695,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[4,8,8,12],"texture":"#gui"}},"rotation":{"origin":[87.80217956446639,17.340825634842695,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[4,12,8,16],"texture":"#gui"}},"rotation":{"origin":[128.02089550147318,25.34082563484269,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[8,0,12,4],"texture":"#gui"}},"rotation":{"origin":[-8.635252309547193,81.77825750885627,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[8,4,12,8],"texture":"#gui"}},"rotation":{"origin":[31.583463627459594,89.77825750885627,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[8,8,12,12],"texture":"#gui"}},"rotation":{"origin":[71.80217956446637,97.77825750885626,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[8,12,12,16],"texture":"#gui"}},"rotation":{"origin":[112.02089550147315,105.77825750885626,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[12,0,16,4],"texture":"#gui"}},"rotation":{"origin":[-24.635252309547177,162.21568938286984,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[12,4,16,8],"texture":"#gui"}},"rotation":{"origin":[15.5834636274596,170.21568938286984,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[12,8,16,12],"texture":"#gui"}},"rotation":{"origin":[55.802179564466385,178.21568938286984,-8.000000000000002],"axis":"z","angle":22.5}},{"from":[-8,0,8],"to":[24,16,-8.000000000000002],"faces":{"south":{"uv":[12,12,16,16],"texture":"#gui"}},"rotation":{"origin":[96.02089550147316,186.2156893828698,-8.000000000000002],"axis":"z","angle":22.5}}],"display":{"gui":{"rotation":[0,0,-22.5],"scale":[4,4,4],"translation":[0,0,-80]}}}
@@ -34,21 +35,35 @@ textures = [
 ]
 
 
+# The backgound + recipe book
 for texture in textures:
     create_gui_model(texture)
 
-
+# All the info boxes
 for box in const.info_boxes:
     create_gui_model("info_box/" + box)
+
+# All the progress indicators
+for i in range(1, 41):
+    create_gui_model("progress/arrow/" + str(i))
+
+for i in range(1, 6):
+    create_gui_model("progress/bubble/" + str(i))
+
+for i in range(1, 11):
+    create_gui_model("progress/blaze/" + str(i))
 
 # -------------------------------
 #  Item definition                            
 # -------------------------------
 
-cases = []
+info_box_checks = []
+bubble_overlay_checks = []
+blaze_overlay_checks = []
+arrow_overlay_checks = []
 
 for box in const.info_boxes:
-    cases.append({
+    info_box_checks.append({
         "when": f"info_box:{box}",
         "model": {
             "type": "minecraft:model",
@@ -56,6 +71,32 @@ for box in const.info_boxes:
         }
     })
 
+for i in range(1, 41):
+    arrow_overlay_checks.append({
+        "when": f"arrow:{i}",
+        "model": {
+            "type": "minecraft:model",
+            "model": f"effect_steal:item/gui/alchemy_table/progress/arrow/{i}"
+        }
+    })
+
+for i in range(1, 6):
+    bubble_overlay_checks.append({
+        "when": f"bubble:{i}",
+        "model": {
+            "type": "minecraft:model",
+            "model": f"effect_steal:item/gui/alchemy_table/progress/bubble/{i}"
+        }
+    })
+
+for i in range(1, 11):
+    blaze_overlay_checks.append({
+        "when": f"blaze:{i}",
+        "model": {
+            "type": "minecraft:model",
+            "model": f"effect_steal:item/gui/alchemy_table/progress/blaze/{i}"
+        }
+    })
 
 
 item_model effect_steal:gui/alchemy_table {
@@ -115,12 +156,167 @@ item_model effect_steal:gui/alchemy_table {
 				"type": "minecraft:select",
 				"property": "minecraft:custom_model_data",
 				"index": 2,
-				"cases": cases,
+				"cases": info_box_checks,
 				"fallback": {
 					"type": "minecraft:empty"
 				}
+			},
+			{
+				"type": "minecraft:select",
+				"property": "minecraft:custom_model_data",
+				"index": 3,
+				"cases": bubble_overlay_checks,
+				"fallback": {
+					"type": "minecraft:empty"
+				},
+                "transformation": {
+                    "translation": [0, 0, 0.2],
+                    "left_rotation": [0, 0, 0, 1.0],
+                    "right_rotation": [0, 0, 0, 1.0],
+                    "scale": [1.0, 1.0, 1.0]
+                }
+			},
+			{
+				"type": "minecraft:select",
+				"property": "minecraft:custom_model_data",
+				"index": 4,
+				"cases": blaze_overlay_checks,
+				"fallback": {
+					"type": "minecraft:empty"
+				},
+                "transformation": {
+                    "translation": [0, 0, 0.2],
+                    "left_rotation": [0, 0, 0, 1.0],
+                    "right_rotation": [0, 0, 0, 1.0],
+                    "scale": [1.0, 1.0, 1.0]
+                }
+			},
+			{
+				"type": "minecraft:select",
+				"property": "minecraft:custom_model_data",
+				"index": 5,
+				"cases": arrow_overlay_checks,
+				"fallback": {
+					"type": "minecraft:empty"
+				},
+                "transformation": {
+                    "translation": [0, 0, 0.2],
+                    "left_rotation": [0, 0, 0, 1.0],
+                    "right_rotation": [0, 0, 0, 1.0],
+                    "scale": [1.0, 1.0, 1.0]
+                }
 			}
 		]
 	},
 	"oversized_in_gui": true
+}
+
+# ==========================================================================================================================================
+# ------------------------------------------------------------------------------------------------------------------------------------------
+#                                                           ALL THE EFFECTS                                                                       
+# ------------------------------------------------------------------------------------------------------------------------------------------
+# ==========================================================================================================================================
+
+cases_active = []
+cases_inactive = []
+
+# -------------------------------
+#  Individual models                            
+# -------------------------------
+
+# The star overlay used to show that the effect is at max level
+model effect_steal:item/gui/alchemy_table/effect/star {
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "effect_steal:item/gui/alchemy_table/effect/star"
+    }
+}
+
+for effect in const.effects:
+    model f"effect_steal:item/gui/alchemy_table/effect/inactive/{effect.id}" {
+        "parent": "minecraft:item/generated",
+        "textures": {
+            "layer0": f"effect_steal:item/gui/alchemy_table/effect/inactive/{effect.id}"
+        }
+    }
+
+    cases_inactive.append({
+        "when": f"effect:{effect.id}",
+        "model": {
+            "type": "minecraft:model",
+            "model": f"effect_steal:item/gui/alchemy_table/effect/inactive/{effect.id}"
+        }
+    })
+
+for effect in const.effects:
+    model f"effect_steal:item/gui/alchemy_table/effect/active/{effect.id}" {
+        "parent": "minecraft:item/generated",
+        "textures": {
+            "layer0": f"effect_steal:item/gui/alchemy_table/effect/active/{effect.id}"
+        }
+    }
+
+    cases_active.append({
+        "when": f"effect:{effect.id}",
+        "model": {
+            "type": "minecraft:model",
+            "model": f"effect_steal:item/gui/alchemy_table/effect/active/{effect.id}"
+        }
+    })
+
+# -------------------------------
+#  Item definition                            
+# -------------------------------
+
+item_model effect_steal:gui/effect {
+	"model": {
+        "type": "minecraft:composite",
+        "models": [
+            {
+                "type": "minecraft:select",
+                "property": "minecraft:custom_model_data",
+                "index": 2,
+                "cases": [
+                    {
+                        "when": "max:true",
+                        "model": {
+                            "type": "minecraft:model",
+                            "model": "effect_steal:item/gui/alchemy_table/effect/star",
+                            "transformation": {
+                                "translation": [0, 0, 0.2],
+                                "left_rotation": [0, 0, 0, 1.0],
+                                "right_rotation": [0, 0, 0, 1.0],
+                                "scale": [1.0, 1.0, 1.0]
+                            }
+                        }
+                    }
+                ],
+                "fallback": {
+                    "type": "minecraft:empty"
+                }
+            },
+            {
+                "type": "minecraft:select",
+                "property": "minecraft:custom_model_data",
+                "index": 1,
+                "cases": [
+                    {
+                        "when": "active:true",
+                        "model": {
+                            "type": "minecraft:select",
+                            "property": "minecraft:custom_model_data",
+                            "index": 0,
+                            "cases": cases_active
+                        }
+                    }
+                ],
+                "fallback": {
+                    "type": "minecraft:select",
+                    "property": "minecraft:custom_model_data",
+                    "index": 0,
+                    "cases": cases_inactive
+                }
+            }
+        ]
+    }
 }

@@ -1,6 +1,7 @@
 {
   "textures": {
-    "gui": "effect_steal:item/gui/alchemy_table/info_box/decrease/slowness"
+    "gui": "effect_steal:item/gui/alchemy_table/info_box/decrease/slowness",
+    "particle": "effect_steal:item/gui/alchemy_table/info_box/decrease/slowness"
   },
   "gui_light": "front",
   "elements": [

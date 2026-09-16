@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:entity_scores",
+	"entity": "this",
+	"scores": {
+		"es.table_id": {
+			"type": "minecraft:score",
+			"target": {
+				"type": "minecraft:fixed",
+				"name": "#search"
+			},
+			"score": "es.table_id",
+			"fallback": -1
+		}
+	}
+}

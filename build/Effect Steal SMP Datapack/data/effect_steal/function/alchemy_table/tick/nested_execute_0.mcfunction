@@ -1,2 +1,2 @@
-execute if predicate theblackswitch:v2.0/patch-5/rand/50 run return fail
-particle minecraft:smoke ^-0.3 ^1.1 ^-0.3 0.05 0.1 0.05 0 2
+execute if slots block ~ ~ ~ effect_steal:alchemy_table/has_faulty_slot run return run function effect_steal:alchemy_table/gui/update
+execute if score @s es.button_click matches 1.. run return run function effect_steal:alchemy_table/gui/update

@@ -235,6 +235,493 @@
         "fallback": {
           "type": "minecraft:empty"
         }
+      },
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 3,
+        "cases": [
+          {
+            "when": "bubble:1",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/bubble/1"
+            }
+          },
+          {
+            "when": "bubble:2",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/bubble/2"
+            }
+          },
+          {
+            "when": "bubble:3",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/bubble/3"
+            }
+          },
+          {
+            "when": "bubble:4",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/bubble/4"
+            }
+          },
+          {
+            "when": "bubble:5",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/bubble/5"
+            }
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:empty"
+        },
+        "transformation": {
+          "translation": [
+            0,
+            0,
+            0.2
+          ],
+          "left_rotation": [
+            0,
+            0,
+            0,
+            1.0
+          ],
+          "right_rotation": [
+            0,
+            0,
+            0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 4,
+        "cases": [
+          {
+            "when": "blaze:1",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/blaze/1"
+            }
+          },
+          {
+            "when": "blaze:2",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/blaze/2"
+            }
+          },
+          {
+            "when": "blaze:3",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/blaze/3"
+            }
+          },
+          {
+            "when": "blaze:4",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/blaze/4"
+            }
+          },
+          {
+            "when": "blaze:5",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/blaze/5"
+            }
+          },
+          {
+            "when": "blaze:6",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/blaze/6"
+            }
+          },
+          {
+            "when": "blaze:7",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/blaze/7"
+            }
+          },
+          {
+            "when": "blaze:8",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/blaze/8"
+            }
+          },
+          {
+            "when": "blaze:9",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/blaze/9"
+            }
+          },
+          {
+            "when": "blaze:10",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/blaze/10"
+            }
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:empty"
+        },
+        "transformation": {
+          "translation": [
+            0,
+            0,
+            0.2
+          ],
+          "left_rotation": [
+            0,
+            0,
+            0,
+            1.0
+          ],
+          "right_rotation": [
+            0,
+            0,
+            0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "type": "minecraft:select",
+        "property": "minecraft:custom_model_data",
+        "index": 5,
+        "cases": [
+          {
+            "when": "arrow:1",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/1"
+            }
+          },
+          {
+            "when": "arrow:2",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/2"
+            }
+          },
+          {
+            "when": "arrow:3",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/3"
+            }
+          },
+          {
+            "when": "arrow:4",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/4"
+            }
+          },
+          {
+            "when": "arrow:5",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/5"
+            }
+          },
+          {
+            "when": "arrow:6",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/6"
+            }
+          },
+          {
+            "when": "arrow:7",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/7"
+            }
+          },
+          {
+            "when": "arrow:8",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/8"
+            }
+          },
+          {
+            "when": "arrow:9",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/9"
+            }
+          },
+          {
+            "when": "arrow:10",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/10"
+            }
+          },
+          {
+            "when": "arrow:11",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/11"
+            }
+          },
+          {
+            "when": "arrow:12",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/12"
+            }
+          },
+          {
+            "when": "arrow:13",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/13"
+            }
+          },
+          {
+            "when": "arrow:14",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/14"
+            }
+          },
+          {
+            "when": "arrow:15",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/15"
+            }
+          },
+          {
+            "when": "arrow:16",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/16"
+            }
+          },
+          {
+            "when": "arrow:17",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/17"
+            }
+          },
+          {
+            "when": "arrow:18",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/18"
+            }
+          },
+          {
+            "when": "arrow:19",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/19"
+            }
+          },
+          {
+            "when": "arrow:20",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/20"
+            }
+          },
+          {
+            "when": "arrow:21",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/21"
+            }
+          },
+          {
+            "when": "arrow:22",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/22"
+            }
+          },
+          {
+            "when": "arrow:23",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/23"
+            }
+          },
+          {
+            "when": "arrow:24",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/24"
+            }
+          },
+          {
+            "when": "arrow:25",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/25"
+            }
+          },
+          {
+            "when": "arrow:26",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/26"
+            }
+          },
+          {
+            "when": "arrow:27",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/27"
+            }
+          },
+          {
+            "when": "arrow:28",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/28"
+            }
+          },
+          {
+            "when": "arrow:29",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/29"
+            }
+          },
+          {
+            "when": "arrow:30",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/30"
+            }
+          },
+          {
+            "when": "arrow:31",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/31"
+            }
+          },
+          {
+            "when": "arrow:32",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/32"
+            }
+          },
+          {
+            "when": "arrow:33",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/33"
+            }
+          },
+          {
+            "when": "arrow:34",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/34"
+            }
+          },
+          {
+            "when": "arrow:35",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/35"
+            }
+          },
+          {
+            "when": "arrow:36",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/36"
+            }
+          },
+          {
+            "when": "arrow:37",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/37"
+            }
+          },
+          {
+            "when": "arrow:38",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/38"
+            }
+          },
+          {
+            "when": "arrow:39",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/39"
+            }
+          },
+          {
+            "when": "arrow:40",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/progress/arrow/40"
+            }
+          }
+        ],
+        "fallback": {
+          "type": "minecraft:empty"
+        },
+        "transformation": {
+          "translation": [
+            0,
+            0,
+            0.2
+          ],
+          "left_rotation": [
+            0,
+            0,
+            0,
+            1.0
+          ],
+          "right_rotation": [
+            0,
+            0,
+            0,
+            1.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
       }
     ]
   },

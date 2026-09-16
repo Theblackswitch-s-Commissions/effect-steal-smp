@@ -28,9 +28,16 @@ summon minecraft:item_display ~0.5 ~1.05 ~0.5 {
     }
 }
 
+setblock ~ ~ ~ minecraft:barrel
+
 execute as @e[type=item_display,tag=es.alchemy_table,tag=INIT,limit=1] at @s:
     tag @s remove INIT
 
+    # Assign an id
+    scoreboard players add #curr es.table_id 1
+    scoreboard players operation @s es.table_id = #curr es.table_id
+
+    # Handle rotation
     execute facing entity @a[tag=es.placed_block,limit=1] eyes run rotate @s ~ 0
 
     if entity @s[y_rotation=-180..-135] run return run rotate @s 180 0
@@ -39,10 +46,6 @@ execute as @e[type=item_display,tag=es.alchemy_table,tag=INIT,limit=1] at @s:
     if entity @s[y_rotation=-45..45] run return run rotate @s 0 0
     if entity @s[y_rotation=-135..-45] run return run rotate @s -90 0
 
-setblock ~ ~ ~ minecraft:barrel
-
-item replace block ~ ~ ~ container.1 with minecraft:poisonous_potato[minecraft:item_model="effect_steal:gui/alchemy_table",minecraft:tooltip_display={"hide_tooltip":true},minecraft:custom_data={"tbs.always_clear":true,"tbs.clear_when_dropped":true,"tbs.clear_misc":true}]
-raw item fill block ~ ~ ~ effect_steal:alchemy_table/locked_slots with minecraft:poisonous_potato[minecraft:item_model="minecraft:air",minecraft:tooltip_display={"hide_tooltip":true},minecraft:custom_data={"tbs.always_clear":true,"tbs.clear_when_dropped":true,"tbs.clear_misc":true}]
-
+function effect_steal:alchemy_table/gui/update
 
 kill @s

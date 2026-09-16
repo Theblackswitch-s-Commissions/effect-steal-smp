@@ -1,6 +1,7 @@
 {
   "textures": {
-    "gui": "effect_steal:item/gui/alchemy_table/info_box/activate/dolphins_grace"
+    "gui": "effect_steal:item/gui/alchemy_table/info_box/activate/dolphins_grace",
+    "particle": "effect_steal:item/gui/alchemy_table/info_box/activate/dolphins_grace"
   },
   "gui_light": "front",
   "elements": [

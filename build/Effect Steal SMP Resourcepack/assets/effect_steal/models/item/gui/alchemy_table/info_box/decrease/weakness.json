@@ -1,6 +1,7 @@
 {
   "textures": {
-    "gui": "effect_steal:item/gui/alchemy_table/info_box/decrease/weakness"
+    "gui": "effect_steal:item/gui/alchemy_table/info_box/decrease/weakness",
+    "particle": "effect_steal:item/gui/alchemy_table/info_box/decrease/weakness"
   },
   "gui_light": "front",
   "elements": [

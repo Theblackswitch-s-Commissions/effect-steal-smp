@@ -1,6 +1,15 @@
-execute if score @s es.button_click matches 1.. run scoreboard players remove @s es.button_click 1
-execute if predicate effect_steal:button_click_done run function effect_steal:alchemy_table/gui/update/nested_execute_0
-execute if score @s es.button_click matches 300.. run return run data modify storage effect_steal:alchemy_table gui.background set value "click:down"
-execute if score @s es.button_click matches 200.. run return run data modify storage effect_steal:alchemy_table gui.background set value "click:middle"
-execute if score @s es.button_click matches 100.. run return run data modify storage effect_steal:alchemy_table gui.background set value "click:up"
-execute unless score @s es.button_click matches 1.. run return run data modify storage effect_steal:alchemy_table gui.background set value "click:none"
+execute store result storage effect_steal:alchemy_table effects.prev_lvl int 1 run scoreboard players operation #prev_effect_lvl temp = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.weakness.level
+execute store result storage effect_steal:alchemy_table effects.curr_lvl int 1 run scoreboard players get @s es.effect_level
+execute store result storage effect_steal:alchemy_table effects.next_lvl int 1 run scoreboard players operation #next_effect_lvl temp = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.conduit_power.level
+data modify storage effect_steal:alchemy_table effects merge value {prev_active: "active:false", curr_active: "active:false", next_active: "active:false"}
+execute if score #prev_effect_lvl temp matches 1.. run data modify storage effect_steal:alchemy_table effects.prev_active set value "active:true"
+execute if score @s es.effect_level matches 1.. run data modify storage effect_steal:alchemy_table effects.curr_active set value "active:true"
+execute if score #next_effect_lvl temp matches 1.. run data modify storage effect_steal:alchemy_table effects.next_active set value "active:true"
+data modify storage effect_steal:alchemy_table effects merge value {prev_max: "max:false", curr_max: "max:false", next_max: "max:false"}
+execute if score #prev_effect_lvl temp matches -1 run data modify storage effect_steal:alchemy_table effects.prev_max set value "max:true"
+execute if score @s es.effect_level matches 3 run data modify storage effect_steal:alchemy_table effects.curr_max set value "max:true"
+execute if score #next_effect_lvl temp matches 1 run data modify storage effect_steal:alchemy_table effects.next_max set value "max:true"
+execute if data storage effect_steal:alchemy_table effects{prev_lvl: 0} run data modify storage effect_steal:alchemy_table effects.prev_lvl set value 1
+execute if data storage effect_steal:alchemy_table effects{curr_lvl: 0} run data modify storage effect_steal:alchemy_table effects.curr_lvl set value 1
+execute if data storage effect_steal:alchemy_table effects{next_lvl: 0} run data modify storage effect_steal:alchemy_table effects.next_lvl set value 1
+function effect_steal:alchemy_table/gui/update/nested_macro_0 with storage effect_steal:alchemy_table effects

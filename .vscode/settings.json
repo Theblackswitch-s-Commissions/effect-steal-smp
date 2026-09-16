@@ -2,9 +2,16 @@
     "python-envs.defaultEnvManager": "ms-python.python:venv",
     "python-envs.pythonProjects": [],
     "mc-dp-icons.tickFunctionNames": [
-        "alchemy_table/tick"
+        "alchemy_table/tick",
+        "ritual/tick",
+        "animation/tick"
     ],
     "mc-dp-icons.loadFunctionNames": [
-        "alchemy_table/load"
+        "alchemy_table/load",
+        "check_recipe/init",
+        "check_input/init",
+        "check_reagent/init",
+        "ritual/init",
+        "animation/init"
     ]
 }

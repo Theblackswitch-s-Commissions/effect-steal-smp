@@ -1,6 +1,7 @@
 {
   "textures": {
-    "gui": "effect_steal:item/gui/alchemy_table/info_box/upgrade/speed"
+    "gui": "effect_steal:item/gui/alchemy_table/info_box/upgrade/speed",
+    "particle": "effect_steal:item/gui/alchemy_table/info_box/upgrade/speed"
   },
   "gui_light": "front",
   "elements": [

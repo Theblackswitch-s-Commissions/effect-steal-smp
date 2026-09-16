@@ -1,6 +1,7 @@
 {
   "textures": {
-    "gui": "effect_steal:item/gui/alchemy_table/info_box/activate/haste"
+    "gui": "effect_steal:item/gui/alchemy_table/info_box/activate/haste",
+    "particle": "effect_steal:item/gui/alchemy_table/info_box/activate/haste"
   },
   "gui_light": "front",
   "elements": [

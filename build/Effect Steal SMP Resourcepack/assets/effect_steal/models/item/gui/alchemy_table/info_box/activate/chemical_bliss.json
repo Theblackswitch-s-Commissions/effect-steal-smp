@@ -1,6 +1,7 @@
 {
   "textures": {
-    "gui": "effect_steal:item/gui/alchemy_table/info_box/activate/chemical_bliss"
+    "gui": "effect_steal:item/gui/alchemy_table/info_box/activate/chemical_bliss",
+    "particle": "effect_steal:item/gui/alchemy_table/info_box/activate/chemical_bliss"
   },
   "gui_light": "front",
   "elements": [

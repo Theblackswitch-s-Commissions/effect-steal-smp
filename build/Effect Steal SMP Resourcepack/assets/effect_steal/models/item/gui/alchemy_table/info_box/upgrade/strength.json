@@ -1,6 +1,7 @@
 {
   "textures": {
-    "gui": "effect_steal:item/gui/alchemy_table/info_box/upgrade/strength"
+    "gui": "effect_steal:item/gui/alchemy_table/info_box/upgrade/strength",
+    "particle": "effect_steal:item/gui/alchemy_table/info_box/upgrade/strength"
   },
   "gui_light": "front",
   "elements": [

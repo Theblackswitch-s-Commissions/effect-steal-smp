@@ -1,0 +1,14 @@
+execute if score @s es.selected_effect matches 0 run function effect_steal:alchemy_table/gui/update/nested_execute_1
+execute if score @s es.selected_effect matches 1 run function effect_steal:alchemy_table/gui/update/nested_execute_2
+execute if score @s es.selected_effect matches 2 run function effect_steal:alchemy_table/gui/update/nested_execute_3
+execute if score @s es.selected_effect matches 3 run function effect_steal:alchemy_table/gui/update/nested_execute_4
+execute if score @s es.selected_effect matches 4 run function effect_steal:alchemy_table/gui/update/nested_execute_5
+execute if score @s es.selected_effect matches 5 run function effect_steal:alchemy_table/gui/update/nested_execute_6
+execute if score @s es.selected_effect matches 6 run function effect_steal:alchemy_table/gui/update/nested_execute_7
+execute if score @s es.selected_effect matches 7 run function effect_steal:alchemy_table/gui/update/nested_execute_8
+execute if score @s es.selected_effect matches 8 run function effect_steal:alchemy_table/gui/update/nested_execute_9
+execute if score @s es.selected_effect matches 9 run function effect_steal:alchemy_table/gui/update/nested_execute_10
+execute if score @s es.selected_effect matches 10 run function effect_steal:alchemy_table/gui/update/nested_execute_11
+execute if score @s es.selected_effect matches 11 run function effect_steal:alchemy_table/gui/update/nested_execute_12
+execute if score @s es.selected_effect matches 12 run function effect_steal:alchemy_table/gui/update/nested_execute_13
+execute if score @s es.selected_effect matches 13 run function effect_steal:alchemy_table/gui/update/nested_execute_14
