@@ -56,10 +56,10 @@
               "index": 0,
               "cases": [
                 {
-                  "when": "effect:chemical_bliss",
+                  "when": "effect:luck",
                   "model": {
                     "type": "minecraft:model",
-                    "model": "effect_steal:item/gui/alchemy_table/effect/active/chemical_bliss"
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/luck"
                   }
                 },
                 {
@@ -105,10 +105,10 @@
                   }
                 },
                 {
-                  "when": "effect:master_of_the_evil",
+                  "when": "effect:unluck",
                   "model": {
                     "type": "minecraft:model",
-                    "model": "effect_steal:item/gui/alchemy_table/effect/active/master_of_the_evil"
+                    "model": "effect_steal:item/gui/alchemy_table/effect/active/unluck"
                   }
                 },
                 {
@@ -163,10 +163,10 @@
           "index": 0,
           "cases": [
             {
-              "when": "effect:chemical_bliss",
+              "when": "effect:luck",
               "model": {
                 "type": "minecraft:model",
-                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/chemical_bliss"
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/luck"
               }
             },
             {
@@ -212,10 +212,10 @@
               }
             },
             {
-              "when": "effect:master_of_the_evil",
+              "when": "effect:unluck",
               "model": {
                 "type": "minecraft:model",
-                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/master_of_the_evil"
+                "model": "effect_steal:item/gui/alchemy_table/effect/inactive/unluck"
               }
             },
             {

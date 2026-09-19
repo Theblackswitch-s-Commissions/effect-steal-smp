@@ -57,10 +57,10 @@
         "index": 2,
         "cases": [
           {
-            "when": "info_box:activate/chemical_bliss",
+            "when": "info_box:activate/luck",
             "model": {
               "type": "minecraft:model",
-              "model": "effect_steal:item/gui/alchemy_table/info_box/activate/chemical_bliss"
+              "model": "effect_steal:item/gui/alchemy_table/info_box/activate/luck"
             }
           },
           {
@@ -106,10 +106,10 @@
             }
           },
           {
-            "when": "info_box:activate/master_of_the_evil",
+            "when": "info_box:activate/unluck",
             "model": {
               "type": "minecraft:model",
-              "model": "effect_steal:item/gui/alchemy_table/info_box/activate/master_of_the_evil"
+              "model": "effect_steal:item/gui/alchemy_table/info_box/activate/unluck"
             }
           },
           {
@@ -134,10 +134,10 @@
             }
           },
           {
-            "when": "info_box:upgrade/chemical_bliss",
+            "when": "info_box:upgrade/luck",
             "model": {
               "type": "minecraft:model",
-              "model": "effect_steal:item/gui/alchemy_table/info_box/upgrade/chemical_bliss"
+              "model": "effect_steal:item/gui/alchemy_table/info_box/upgrade/luck"
             }
           },
           {
@@ -162,10 +162,10 @@
             }
           },
           {
-            "when": "info_box:upgrade/master_of_the_evil",
+            "when": "info_box:upgrade/unluck",
             "model": {
               "type": "minecraft:model",
-              "model": "effect_steal:item/gui/alchemy_table/info_box/upgrade/master_of_the_evil"
+              "model": "effect_steal:item/gui/alchemy_table/info_box/upgrade/unluck"
             }
           },
           {
@@ -187,6 +187,27 @@
             "model": {
               "type": "minecraft:model",
               "model": "effect_steal:item/gui/alchemy_table/info_box/upgrade/strength"
+            }
+          },
+          {
+            "when": "info_box:upgrade/conduit_power",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/info_box/upgrade/conduit_power"
+            }
+          },
+          {
+            "when": "info_box:upgrade/dolphins_grace",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/info_box/upgrade/dolphins_grace"
+            }
+          },
+          {
+            "when": "info_box:upgrade/fire_resistance",
+            "model": {
+              "type": "minecraft:model",
+              "model": "effect_steal:item/gui/alchemy_table/info_box/upgrade/fire_resistance"
             }
           },
           {

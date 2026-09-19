@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "effect_steal:item/gui/alchemy_table/effect/active/chemical_bliss"
-  }
-}

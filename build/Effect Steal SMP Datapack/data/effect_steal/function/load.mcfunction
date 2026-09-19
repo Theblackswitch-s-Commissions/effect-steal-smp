@@ -1,14 +1,15 @@
 forceload add 0 0
 tellraw @a [{text: "[Server]: "}, {text: "Effect Steal SMP reloaded!", color: "green"}]
 scoreboard objectives add es.use.cod_spawn_egg minecraft.used:minecraft.cod_spawn_egg
-scoreboard objectives add es.effect.chemical_bliss.level dummy
+scoreboard objectives add es.death deathCount
+scoreboard objectives add es.effect.luck.level dummy
 scoreboard objectives add es.effect.conduit_power.level dummy
 scoreboard objectives add es.effect.dolphins_grace.level dummy
 scoreboard objectives add es.effect.fire_resistance.level dummy
 scoreboard objectives add es.effect.haste.level dummy
 scoreboard objectives add es.effect.health_boost.level dummy
 scoreboard objectives add es.effect.jump_boost.level dummy
-scoreboard objectives add es.effect.master_of_the_evil.level dummy
+scoreboard objectives add es.effect.unluck.level dummy
 scoreboard objectives add es.effect.resistance.level dummy
 scoreboard objectives add es.effect.speed.level dummy
 scoreboard objectives add es.effect.strength.level dummy

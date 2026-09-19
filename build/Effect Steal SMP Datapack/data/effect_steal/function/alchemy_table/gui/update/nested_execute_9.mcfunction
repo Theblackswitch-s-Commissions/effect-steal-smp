@@ -1,4 +1,4 @@
-execute store result storage effect_steal:alchemy_table effects.prev_lvl int 1 run scoreboard players operation #prev_effect_lvl temp = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.master_of_the_evil.level
+execute store result storage effect_steal:alchemy_table effects.prev_lvl int 1 run scoreboard players operation #prev_effect_lvl temp = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.unluck.level
 execute store result storage effect_steal:alchemy_table effects.curr_lvl int 1 run scoreboard players get @s es.effect_level
 execute store result storage effect_steal:alchemy_table effects.next_lvl int 1 run scoreboard players operation #next_effect_lvl temp = @a[predicate=theblackswitch:v2.0/patch-5/player_id/match_search, limit=1] es.effect.speed.level
 data modify storage effect_steal:alchemy_table effects merge value {prev_active: "active:false", curr_active: "active:false", next_active: "active:false"}

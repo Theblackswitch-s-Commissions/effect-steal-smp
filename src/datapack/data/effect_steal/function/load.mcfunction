@@ -1,6 +1,5 @@
 import effect_steal:const as const
 
-
 forceload add 0 0
 tellraw @a [{"text":"[Server]: "}, {"text":"Effect Steal SMP reloaded!", "color": "green"}]
 
@@ -9,6 +8,7 @@ tellraw @a [{"text":"[Server]: "}, {"text":"Effect Steal SMP reloaded!", "color"
 # -------------------------------
 
 scoreboard objectives add es.use.cod_spawn_egg minecraft.used:minecraft.cod_spawn_egg
+scoreboard objectives add es.death deathCount
 
 # ======= Player Permanent effects =======
 

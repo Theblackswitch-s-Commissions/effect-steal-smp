@@ -3,4 +3,5 @@ data remove block ~ ~ ~ Items
 setblock ~ ~ ~ minecraft:air strict
 setblock ~ ~ ~ minecraft:barrel strict
 item fill block ~ ~ ~ container.* from entity @s container.*
+data remove entity @s Items
 kill @s

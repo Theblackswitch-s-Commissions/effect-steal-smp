@@ -6,26 +6,29 @@
 # -------------------------------
 
 info_boxes = [
-    "activate/chemical_bliss",
+    "activate/luck",
     "activate/conduit_power",
     "activate/dolphins_grace",
     "activate/fire_resistance",
     "activate/haste",
     "activate/health_boost",
     "activate/jump_boost",
-    "activate/master_of_the_evil",
+    "activate/unluck",
     "activate/resistance",
     "activate/speed",
     "activate/strength",
 
-    "upgrade/chemical_bliss",
+    "upgrade/luck",
     "upgrade/haste",
     "upgrade/health_boost",
     "upgrade/jump_boost",
-    "upgrade/master_of_the_evil",
+    "upgrade/unluck",
     "upgrade/resistance",
     "upgrade/speed",
     "upgrade/strength",
+    "upgrade/conduit_power",
+    "upgrade/dolphins_grace",
+    "upgrade/fire_resistance",
 
     "clear/mining_fatigue",
     "clear/slowness",
@@ -41,14 +44,14 @@ info_boxes = [
 # -------------------------------
 
 effects = [
-    {"id": "chemical_bliss"     , "type": "positive", "max_lvl": 3},
+    {"id": "luck"     , "type": "positive", "max_lvl": 3},
     {"id": "conduit_power"      , "type": "positive", "max_lvl": 1},
     {"id": "dolphins_grace"     , "type": "positive", "max_lvl": 1},
     {"id": "fire_resistance"    , "type": "positive", "max_lvl": 1},
     {"id": "haste"              , "type": "positive", "max_lvl": -1},
     {"id": "health_boost"       , "type": "positive", "max_lvl": 3},
     {"id": "jump_boost"         , "type": "positive", "max_lvl": -1},
-    {"id": "master_of_the_evil" , "type": "positive", "max_lvl": 3},
+    {"id": "unluck" , "type": "positive", "max_lvl": 3},
     {"id": "resistance"         , "type": "positive", "max_lvl": 2},
     {"id": "speed"              , "type": "positive", "max_lvl": -1},
     {"id": "strength"           , "type": "positive", "max_lvl": -1},
@@ -57,3 +60,86 @@ effects = [
     {"id": "slowness"           , "type": "negative", "max_lvl": -1},
     {"id": "weakness"           , "type": "negative", "max_lvl": -1}
 ]
+
+# -------------------------------
+#  All the potions                            
+# -------------------------------
+
+potions = [
+    {"id": "night_vision", "effect_name": "night_vision", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 1},
+    {"id": "invisibility", "effect_name": "invisibility", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 1},
+    {"id": "leaping", "effect_name": "jump_boost", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 2},
+    {"id": "swiftness", "effect_name": "speed", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 2},
+    {"id": "fire_resistance", "effect_name": "fire_resistance", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 1},
+    {"id": "water_breathing", "effect_name": "water_breathing", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 1},
+    {"id": "healing", "effect_name": "instant_health", "type":"positive", "duration": 0, "target_duration": 1, "target_level": 2},
+    {"id": "harming", "effect_name": "instant_damage", "type":"negative", "duration": 0, "target_duration": 1, "target_level": 2},
+    {"id": "regeneration", "effect_name": "regeneration", "type":"positive", "duration": 900, "target_duration": 2, "target_level": 2},
+    {"id": "strength", "effect_name": "strength", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 2},
+    {"id": "slow_falling", "effect_name": "slow_falling", "type":"positive", "duration": 1800, "target_duration": 3.34, "target_level": 1},
+    {"id": "slowness", "effect_name": "slowness", "type":"negative", "duration": 1800, "target_duration": 3.34, "target_level": 2},
+    {"id": "poison", "effect_name": "poison", "type":"negative", "duration": 900, "target_duration": 2, "target_level": 2},
+    {"id": "weakness", "effect_name": "weakness", "type":"negative", "duration": 1800, "target_duration": 3.34, "target_level": 2},
+    {"id": "wind_charged", "effect_name": "wind_charged", "type":"negative", "duration": 3600, "target_duration": 1.67, "target_level": 1},
+    {"id": "weaving", "effect_name": "weaving", "type":"negative", "duration": 3600, "target_duration": 1.67, "target_level": 1},
+    {"id": "oozing", "effect_name": "oozing", "type":"negative", "duration": 3600, "target_duration": 1.67, "target_level": 1},
+    {"id": "infested", "effect_name": "infested", "type":"negative", "duration": 3600, "target_duration": 1.67, "target_level": 1},
+
+    {"id": "long_night_vision", "effect_name": "night_vision", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 1},
+    {"id": "long_invisibility", "effect_name": "invisibility", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 1},
+    {"id": "long_leaping", "effect_name": "jump_boost", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 2},
+    {"id": "long_swiftness", "effect_name": "speed", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 2},
+    {"id": "long_fire_resistance", "effect_name": "fire_resistance", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 1},
+    {"id": "long_water_breathing", "effect_name": "water_breathing", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 1},
+    {"id": "long_regeneration", "effect_name": "regeneration", "type":"positive", "duration": 1800, "target_duration": 3.34, "target_level": 2},
+    {"id": "long_strength", "effect_name": "strength", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 2},
+    {"id": "long_slow_falling", "effect_name": "slow_falling", "type":"positive", "duration": 4800, "target_duration": 1.75, "target_level": 1},
+    {"id": "long_slowness", "effect_name": "slowness", "type":"negative", "duration": 4800, "target_duration": 1.75, "target_level": 2},
+    {"id": "long_poison", "effect_name": "poison", "type":"negative", "duration": 1800, "target_duration": 3.34, "target_level": 2},
+    {"id": "long_weakness", "effect_name": "weakness", "type":"negative", "duration": 4800, "target_duration": 1.75, "target_level": 2},
+
+    {"id": "strong_leaping", "effect_name": "jump_boost", "type":"positive", "duration": 1800, "target_duration": 3.34, "target_level": 3},
+    {"id": "strong_swiftness", "effect_name": "speed", "type":"positive", "duration": 1800, "target_duration": 3.34, "target_level": 3},
+    {"id": "strong_healing", "effect_name": "instant_health", "type":"positive", "duration": 0, "target_duration": 1, "target_level": 3},
+    {"id": "strong_harming", "effect_name": "instant_damage", "type":"negative", "duration": 0, "target_duration": 1, "target_level": 3},
+    {"id": "strong_regeneration", "effect_name": "regeneration", "type":"positive", "duration": 440, "target_duration": 2.045, "target_level": 3},
+    {"id": "strong_strength", "effect_name": "strength", "type":"positive", "duration": 1800, "target_duration": 3.34, "target_level": 3},
+    {"id": "strong_slowness", "effect_name": "slowness", "type":"negative", "duration": 400, "target_duration": 2.25, "target_level": 3},
+    {"id": "strong_poison", "effect_name": "poison", "type":"negative", "duration": 420, "target_duration": 2.14, "target_level": 3}
+]
+
+
+"""
+0:00 -> 0:00 (1 -> 1)
+0:20 -> 1:30 (2.25 -> 4.5)
+0:21 -> 1:30 (2.14 -> 4.29)
+0:22 -> 1:30 (2.045 -> 4.09)
+0:45 -> 3:00 (2 -> 4)
+1:30 -> 8:00 (3.34 -> 5.34)
+3:00 -> 8:00 (1.67 -> 2.67)
+8:00 -> 16:00 (1.5 -> 2)
+4:00 -> 10:00 (1.75 -> 2.5)
+"""
+
+
+def even_more_duration(duration):
+    if duration == 1:
+        return 1
+    elif duration == 2.25:
+        return 4.5
+    elif duration == 2.14:
+        return 4.29
+    elif duration == 2.045:
+        return 4.09
+    elif duration == 2:
+        return 4
+    elif duration == 3.34:
+        return 5.34
+    elif duration == 1.67:
+        return 2.67
+    elif duration == 1.5:
+        return 2
+    elif duration == 1.75:
+        return 2.5
+    else:
+        raise Exception(f"Couldn't process potion duration {duration}!")

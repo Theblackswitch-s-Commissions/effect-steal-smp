@@ -39,7 +39,8 @@
         ],
         "bolt": {
             "entrypoint": [
-                "effect_steal:alchemy_table_gui"
+                "effect_steal:alchemy_table_gui",
+                "effect_steal:lang"
             ]
         }
     }

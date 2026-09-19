@@ -1,0 +1,20 @@
+{
+    "type": "group",
+    "terms": [
+        {
+            "type": "slot_range",
+            "source": "container",
+            "slots": "container.0"
+        },
+        {
+            "type": "slot_range",
+            "source": "container",
+            "slots": "container.1"
+        },
+        {
+            "type": "slot_range",
+            "source": "container",
+            "slots": "container.2"
+        }
+    ]
+}

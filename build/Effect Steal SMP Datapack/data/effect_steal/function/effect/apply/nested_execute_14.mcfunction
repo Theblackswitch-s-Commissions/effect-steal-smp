@@ -1,0 +1,14 @@
+execute if score @s es.effect.luck.level matches 1.. run function effect_steal:effect/apply/nested_execute_0
+execute if score @s es.effect.conduit_power.level matches 1.. run function effect_steal:effect/apply/nested_execute_1
+execute if score @s es.effect.dolphins_grace.level matches 1.. run function effect_steal:effect/apply/nested_execute_2
+execute if score @s es.effect.fire_resistance.level matches 1.. run function effect_steal:effect/apply/nested_execute_3
+execute if score @s es.effect.haste.level matches 1.. run function effect_steal:effect/apply/nested_execute_4
+execute if score @s es.effect.health_boost.level matches 1.. run function effect_steal:effect/apply/nested_execute_5
+execute if score @s es.effect.jump_boost.level matches 1.. run function effect_steal:effect/apply/nested_execute_6
+execute if score @s es.effect.unluck.level matches 1.. run function effect_steal:effect/apply/nested_execute_7
+execute if score @s es.effect.resistance.level matches 1.. run function effect_steal:effect/apply/nested_execute_8
+execute if score @s es.effect.speed.level matches 1.. run function effect_steal:effect/apply/nested_execute_9
+execute if score @s es.effect.strength.level matches 1.. run function effect_steal:effect/apply/nested_execute_10
+execute if score @s es.effect.mining_fatigue.level matches 1.. run function effect_steal:effect/apply/nested_execute_11
+execute if score @s es.effect.slowness.level matches 1.. run function effect_steal:effect/apply/nested_execute_12
+execute if score @s es.effect.weakness.level matches 1.. run function effect_steal:effect/apply/nested_execute_13

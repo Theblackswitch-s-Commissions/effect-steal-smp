@@ -1,0 +1,14 @@
+scoreboard players reset @s es.effect.luck.level
+scoreboard players reset @s es.effect.conduit_power.level
+scoreboard players reset @s es.effect.dolphins_grace.level
+scoreboard players reset @s es.effect.fire_resistance.level
+scoreboard players reset @s es.effect.haste.level
+scoreboard players reset @s es.effect.health_boost.level
+scoreboard players reset @s es.effect.jump_boost.level
+scoreboard players reset @s es.effect.unluck.level
+scoreboard players reset @s es.effect.resistance.level
+scoreboard players reset @s es.effect.speed.level
+scoreboard players reset @s es.effect.strength.level
+scoreboard players reset @s es.effect.mining_fatigue.level
+scoreboard players reset @s es.effect.slowness.level
+scoreboard players reset @s es.effect.weakness.level

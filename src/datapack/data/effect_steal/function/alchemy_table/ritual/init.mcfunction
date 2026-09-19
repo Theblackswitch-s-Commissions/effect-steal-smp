@@ -12,6 +12,8 @@ execute summon minecraft:chest_minecart:
     setblock ~ ~ ~ minecraft:air strict
     setblock ~ ~ ~ minecraft:barrel strict
     raw item fill block ~ ~ ~ container.* from entity @s container.*
+
+    data remove entity @s Items
     kill @s
 
 # Summon the item displays

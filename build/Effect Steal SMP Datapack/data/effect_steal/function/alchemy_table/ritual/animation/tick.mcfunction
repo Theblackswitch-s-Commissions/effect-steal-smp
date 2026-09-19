@@ -12,5 +12,6 @@ execute if score @s es.animation matches 190..200 if score #10 tbs.slow_tick mat
 execute if score @s es.animation matches 220..260 run particle minecraft:portal ~ ~ ~ 0 0 0 0.9 20
 execute if score @s es.animation matches 200 run playsound minecraft:entity.warden.sonic_charge block @a ~ ~ ~ 0.8 0
 execute if score @s es.animation matches 200..220 at @e[type=item_display, tag=es.alchemy_table_ingredient, tag=es.selected, predicate=effect_steal:match_table_id] run particle minecraft:end_rod ~ ~ ~ 0.1 0.1 0.1 0.05 2
-execute if score @s es.animation matches 270 positioned ^ ^ ^0.55 run function effect_steal:alchemy_table/ritual/animation/tick/nested_execute_8
+execute if score @s es.animation matches 270 positioned ^ ^0.5 ^0.55 run function effect_steal:alchemy_table/ritual/animation/tick/nested_execute_8
+execute if score @s es.animation matches 271 run return run function effect_steal:alchemy_table/ritual/finish
 scoreboard players add @s es.animation 1
