@@ -1,7 +1,2 @@
-item fill entity @s container.* from block ~ ~ ~ container.*
-data remove block ~ ~ ~ Items
-setblock ~ ~ ~ minecraft:air strict
-setblock ~ ~ ~ minecraft:barrel strict
-item fill block ~ ~ ~ container.* from entity @s container.*
-data remove entity @s Items
-kill @s
+advancement grant @s only effect_steal:main/start_ritual
+scoreboard players add @s es.rituals_done 1

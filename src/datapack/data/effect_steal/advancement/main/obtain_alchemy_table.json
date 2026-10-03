@@ -1,0 +1,39 @@
+{
+    "parent": "effect_steal:main/obtain_brewing_stand",
+    "display": {
+        "icon": {
+            "id": "minecraft:brewing_stand",
+            "components": {
+                "minecraft:item_model": "effect_steal:block/alchemy_table"
+            }
+        },
+        "title": "Full Alchemy!",
+        "description": [
+            {
+                "text": "Upgrade your brewing stand into an alchemy table.\n\n",
+                "color": "gold"
+            },
+            {
+                "text": "You can find the recipe in your recipe book.",
+                "color": "dark_gray"
+            }
+        ]
+    },
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "minecraft:cod_spawn_egg",
+                        "predicates": {
+                            "minecraft:custom_data": {
+                                "effect_steal:alchemy_table": true
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

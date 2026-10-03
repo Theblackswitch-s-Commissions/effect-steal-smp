@@ -1,0 +1,53 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:poisonous_potato",
+            "components": {
+                "minecraft:item_model": "effect_steal:item/advancement_root"
+            }
+        },
+        "title": "Effect Steal SMP",
+        "description": [
+            "",
+            {
+                "color": "blue",
+                "text": "Welcome to the: \n",
+                "extra": [
+                    {
+                        "font": "effect_steal:main",
+                        "text": "\uE001",
+                        "color": "white"
+                    },
+                    " Effect SMP ",
+                    {
+                        "font": "effect_steal:main",
+                        "text": "\uE001",
+                        "color": "white"
+                    }
+                ]
+            },
+            {
+                "color": "gold",
+                "text": "\n\nUnlock "
+            },
+            {
+                "color": "gold",
+                "text": "permanent effects"
+            },
+            {
+                "color": "gold",
+                "text": " and use them tactically to defeat your opponent!\n\n"
+            },
+            {
+                "color": "dark_red",
+                "text": "But behold, every time you die, you'll be cursed with a negative effect."
+            }
+        ],
+        "background": "effect_steal:item/advancement"
+    },
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

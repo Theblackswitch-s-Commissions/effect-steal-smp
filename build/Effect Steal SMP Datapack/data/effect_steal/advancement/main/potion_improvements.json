@@ -1,0 +1,42 @@
+{
+  "parent": "effect_steal:main/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:regeneration"
+        }
+      }
+    },
+    "title": "Potion improvements",
+    "description": [
+      "",
+      {
+        "color": "red",
+        "text": "This pack also comes with some QOL changes:\n"
+      },
+      {
+        "color": "yellow",
+        "text": "> Potions "
+      },
+      {
+        "color": "gold",
+        "text": "stack to 16"
+      },
+      {
+        "color": "yellow",
+        "text": " inside bundles\n> Potions can be "
+      },
+      {
+        "color": "gold",
+        "text": "consumed instantly"
+      }
+    ]
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

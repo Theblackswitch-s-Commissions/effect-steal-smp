@@ -1,5 +1,6 @@
 # This file contains constants that are used to generate the pack
 
+import math
 
 # -------------------------------
 #  All the info boxes
@@ -44,14 +45,14 @@ info_boxes = [
 # -------------------------------
 
 effects = [
-    {"id": "luck"     , "type": "positive", "max_lvl": 3},
+    {"id": "luck"               , "type": "positive", "max_lvl": 3},
     {"id": "conduit_power"      , "type": "positive", "max_lvl": 1},
     {"id": "dolphins_grace"     , "type": "positive", "max_lvl": 1},
     {"id": "fire_resistance"    , "type": "positive", "max_lvl": 1},
     {"id": "haste"              , "type": "positive", "max_lvl": -1},
     {"id": "health_boost"       , "type": "positive", "max_lvl": 3},
     {"id": "jump_boost"         , "type": "positive", "max_lvl": -1},
-    {"id": "unluck" , "type": "positive", "max_lvl": 3},
+    {"id": "unluck"             , "type": "positive", "max_lvl": 3},
     {"id": "resistance"         , "type": "positive", "max_lvl": 2},
     {"id": "speed"              , "type": "positive", "max_lvl": -1},
     {"id": "strength"           , "type": "positive", "max_lvl": -1},
@@ -66,80 +67,102 @@ effects = [
 # -------------------------------
 
 potions = [
-    {"id": "night_vision", "effect_name": "night_vision", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 1},
-    {"id": "invisibility", "effect_name": "invisibility", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 1},
-    {"id": "leaping", "effect_name": "jump_boost", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 2},
-    {"id": "swiftness", "effect_name": "speed", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 2},
-    {"id": "fire_resistance", "effect_name": "fire_resistance", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 1},
-    {"id": "water_breathing", "effect_name": "water_breathing", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 1},
-    {"id": "healing", "effect_name": "instant_health", "type":"positive", "duration": 0, "target_duration": 1, "target_level": 2},
-    {"id": "harming", "effect_name": "instant_damage", "type":"negative", "duration": 0, "target_duration": 1, "target_level": 2},
-    {"id": "regeneration", "effect_name": "regeneration", "type":"positive", "duration": 900, "target_duration": 2, "target_level": 2},
-    {"id": "strength", "effect_name": "strength", "type":"positive", "duration": 3600, "target_duration": 1.67, "target_level": 2},
-    {"id": "slow_falling", "effect_name": "slow_falling", "type":"positive", "duration": 1800, "target_duration": 3.34, "target_level": 1},
-    {"id": "slowness", "effect_name": "slowness", "type":"negative", "duration": 1800, "target_duration": 3.34, "target_level": 2},
-    {"id": "poison", "effect_name": "poison", "type":"negative", "duration": 900, "target_duration": 2, "target_level": 2},
-    {"id": "weakness", "effect_name": "weakness", "type":"negative", "duration": 1800, "target_duration": 3.34, "target_level": 2},
-    {"id": "wind_charged", "effect_name": "wind_charged", "type":"negative", "duration": 3600, "target_duration": 1.67, "target_level": 1},
-    {"id": "weaving", "effect_name": "weaving", "type":"negative", "duration": 3600, "target_duration": 1.67, "target_level": 1},
-    {"id": "oozing", "effect_name": "oozing", "type":"negative", "duration": 3600, "target_duration": 1.67, "target_level": 1},
-    {"id": "infested", "effect_name": "infested", "type":"negative", "duration": 3600, "target_duration": 1.67, "target_level": 1},
+    {"id": "night_vision",      "effect_name": "night_vision",      "type":"positive",  "duration": 3600,   "level": 0,     "target_duration": 6000,    "target_level": 0},
+    {"id": "invisibility",      "effect_name": "invisibility",      "type":"positive",  "duration": 3600,   "level": 0,     "target_duration": 6000,    "target_level": 0},
+    {"id": "leaping",           "effect_name": "jump_boost",        "type":"positive",  "duration": 3600,   "level": 0,     "target_duration": 6000,    "target_level": 1},
+    {"id": "swiftness",         "effect_name": "speed",             "type":"positive",  "duration": 3600,   "level": 0,     "target_duration": 6000,    "target_level": 1},
+    {"id": "fire_resistance",   "effect_name": "fire_resistance",   "type":"positive",  "duration": 3600,   "level": 0,     "target_duration": 6000,    "target_level": 0},
+    {"id": "water_breathing",   "effect_name": "water_breathing",   "type":"positive",  "duration": 3600,   "level": 0,     "target_duration": 6000,    "target_level": 0},
+    {"id": "healing",           "effect_name": "instant_health",    "type":"positive",  "duration": 0,      "level": 0,     "target_duration": 0,       "target_level": 1},
+    {"id": "harming",           "effect_name": "instant_damage",    "type":"negative",  "duration": 0,      "level": 0,     "target_duration": 0,       "target_level": 1},
+    {"id": "regeneration",      "effect_name": "regeneration",      "type":"positive",  "duration": 900,    "level": 0,     "target_duration": 1800,    "target_level": 1},
+    {"id": "strength",          "effect_name": "strength",          "type":"positive",  "duration": 3600,   "level": 0,     "target_duration": 6000,    "target_level": 1},
+    {"id": "slow_falling",      "effect_name": "slow_falling",      "type":"positive",  "duration": 1800,   "level": 0,     "target_duration": 3600,    "target_level": 0},
+    {"id": "slowness",          "effect_name": "slowness",          "type":"negative",  "duration": 1800,   "level": 0,     "target_duration": 3600,    "target_level": 1},
+    {"id": "poison",            "effect_name": "poison",            "type":"negative",  "duration": 900,    "level": 0,     "target_duration": 1800,    "target_level": 1},
+    {"id": "weakness",          "effect_name": "weakness",          "type":"negative",  "duration": 1800,   "level": 0,     "target_duration": 3600,    "target_level": 1},
+    {"id": "wind_charged",      "effect_name": "wind_charged",      "type":"negative",  "duration": 3600,   "level": 0,     "target_duration": 6000,    "target_level": 0},
+    {"id": "weaving",           "effect_name": "weaving",           "type":"negative",  "duration": 3600,   "level": 0,     "target_duration": 6000,    "target_level": 0},
+    {"id": "oozing",            "effect_name": "oozing",            "type":"negative",  "duration": 3600,   "level": 0,     "target_duration": 6000,    "target_level": 0},
+    {"id": "infested",          "effect_name": "infested",          "type":"negative",  "duration": 3600,   "level": 0,     "target_duration": 6000,    "target_level": 0},
 
-    {"id": "long_night_vision", "effect_name": "night_vision", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 1},
-    {"id": "long_invisibility", "effect_name": "invisibility", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 1},
-    {"id": "long_leaping", "effect_name": "jump_boost", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 2},
-    {"id": "long_swiftness", "effect_name": "speed", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 2},
-    {"id": "long_fire_resistance", "effect_name": "fire_resistance", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 1},
-    {"id": "long_water_breathing", "effect_name": "water_breathing", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 1},
-    {"id": "long_regeneration", "effect_name": "regeneration", "type":"positive", "duration": 1800, "target_duration": 3.34, "target_level": 2},
-    {"id": "long_strength", "effect_name": "strength", "type":"positive", "duration": 9600, "target_duration": 1.5, "target_level": 2},
-    {"id": "long_slow_falling", "effect_name": "slow_falling", "type":"positive", "duration": 4800, "target_duration": 1.75, "target_level": 1},
-    {"id": "long_slowness", "effect_name": "slowness", "type":"negative", "duration": 4800, "target_duration": 1.75, "target_level": 2},
-    {"id": "long_poison", "effect_name": "poison", "type":"negative", "duration": 1800, "target_duration": 3.34, "target_level": 2},
-    {"id": "long_weakness", "effect_name": "weakness", "type":"negative", "duration": 4800, "target_duration": 1.75, "target_level": 2},
+    {"id": "long_night_vision",     "effect_name": "night_vision",      "type":"positive",  "duration": 9600,   "level": 0,     "target_duration": 14400,   "target_level": 0},
+    {"id": "long_invisibility",     "effect_name": "invisibility",      "type":"positive",  "duration": 9600,   "level": 0,     "target_duration": 14400,   "target_level": 0},
+    {"id": "long_leaping",          "effect_name": "jump_boost",        "type":"positive",  "duration": 9600,   "level": 0,     "target_duration": 14400,   "target_level": 1},
+    {"id": "long_swiftness",        "effect_name": "speed",             "type":"positive",  "duration": 9600,   "level": 0,     "target_duration": 14400,   "target_level": 1},
+    {"id": "long_fire_resistance",  "effect_name": "fire_resistance",   "type":"positive",  "duration": 9600,   "level": 0,     "target_duration": 14400,   "target_level": 0},
+    {"id": "long_water_breathing",  "effect_name": "water_breathing",   "type":"positive",  "duration": 9600,   "level": 0,     "target_duration": 14400,   "target_level": 0},
+    {"id": "long_regeneration",     "effect_name": "regeneration",      "type":"positive",  "duration": 1800,   "level": 0,     "target_duration": 3600,    "target_level": 1},
+    {"id": "long_strength",         "effect_name": "strength",          "type":"positive",  "duration": 9600,   "level": 0,     "target_duration": 14400,   "target_level": 1},
+    {"id": "long_slow_falling",     "effect_name": "slow_falling",      "type":"positive",  "duration": 4800,   "level": 0,     "target_duration": 9600,    "target_level": 0},
+    {"id": "long_slowness",         "effect_name": "slowness",          "type":"negative",  "duration": 4800,   "level": 0,     "target_duration": 9600,    "target_level": 1},
+    {"id": "long_poison",           "effect_name": "poison",            "type":"negative",  "duration": 1800,   "level": 0,     "target_duration": 3600,    "target_level": 1},
+    {"id": "long_weakness",         "effect_name": "weakness",          "type":"negative",  "duration": 4800,   "level": 0,     "target_duration": 9600,     "target_level": 1},
 
-    {"id": "strong_leaping", "effect_name": "jump_boost", "type":"positive", "duration": 1800, "target_duration": 3.34, "target_level": 3},
-    {"id": "strong_swiftness", "effect_name": "speed", "type":"positive", "duration": 1800, "target_duration": 3.34, "target_level": 3},
-    {"id": "strong_healing", "effect_name": "instant_health", "type":"positive", "duration": 0, "target_duration": 1, "target_level": 3},
-    {"id": "strong_harming", "effect_name": "instant_damage", "type":"negative", "duration": 0, "target_duration": 1, "target_level": 3},
-    {"id": "strong_regeneration", "effect_name": "regeneration", "type":"positive", "duration": 440, "target_duration": 2.045, "target_level": 3},
-    {"id": "strong_strength", "effect_name": "strength", "type":"positive", "duration": 1800, "target_duration": 3.34, "target_level": 3},
-    {"id": "strong_slowness", "effect_name": "slowness", "type":"negative", "duration": 400, "target_duration": 2.25, "target_level": 3},
-    {"id": "strong_poison", "effect_name": "poison", "type":"negative", "duration": 420, "target_duration": 2.14, "target_level": 3}
+    {"id": "strong_leaping",        "effect_name": "jump_boost",        "type":"positive",  "duration": 1800,   "level": 1,     "target_duration": 3600,    "target_level": 2},
+    {"id": "strong_swiftness",      "effect_name": "speed",             "type":"positive",  "duration": 1800,   "level": 1,     "target_duration": 3600,    "target_level": 2},
+    {"id": "strong_healing",        "effect_name": "instant_health",    "type":"positive",  "duration": 0,      "level": 1,     "target_duration": 0,       "target_level": 2},
+    {"id": "strong_harming",        "effect_name": "instant_damage",    "type":"negative",  "duration": 0,      "level": 1,     "target_duration": 0,       "target_level": 2},
+    {"id": "strong_regeneration",   "effect_name": "regeneration",      "type":"positive",  "duration": 440,    "level": 1,     "target_duration": 900,    "target_level": 2},
+    {"id": "strong_strength",       "effect_name": "strength",          "type":"positive",  "duration": 1800,   "level": 1,     "target_duration": 3600,    "target_level": 2},
+    {"id": "strong_slowness",       "effect_name": "slowness",          "type":"negative",  "duration": 400,    "level": 1,     "target_duration": 900,    "target_level": 2},
+    {"id": "strong_poison",         "effect_name": "poison",            "type":"negative",  "duration": 420,    "level": 1,     "target_duration": 900,    "target_level": 2}
 ]
 
 
 """
-0:00 -> 0:00 (1 -> 1)
-0:20 -> 1:30 (2.25 -> 4.5)
-0:21 -> 1:30 (2.14 -> 4.29)
-0:22 -> 1:30 (2.045 -> 4.09)
-0:45 -> 3:00 (2 -> 4)
-1:30 -> 8:00 (3.34 -> 5.34)
-3:00 -> 8:00 (1.67 -> 2.67)
-8:00 -> 16:00 (1.5 -> 2)
-4:00 -> 10:00 (1.75 -> 2.5)
+NONE   | LVL 1  | LVL 2
+0:00  -> 0:00  -> 0:00
+0:05  -> 0:11  -> 0:22        (2.2 -> 4.4)
+0:07  -> 0:15  -> 0:30        (2.15 -> 4.29)
+0:15  -> 0:30  -> 0:45        (2.02 -> 3)
+0:20  -> 0:45  -> 1:30        (2.25 -> 4.5)
+0:21  -> 0:45  -> 1:30        (2.15 -> 4.29)
+0:22  -> 0:45  -> 1:30        (2.04 -> 4.09)
+0:30  -> 0:45  -> 1:30        (1.51 -> 3)
+0:45  -> 1:30  -> 3:00        (2 -> 4)
+1:20  -> 3:00  -> 5:00        (2.26 -> 3.75)
+1:30  -> 3:00  -> 5:00        (2.01 -> 3.34)
+3:00  -> 5:00  -> 8:00        (1.67 -> 2.67)
+8:00  -> 12:00 -> 16:00       (1.5 -> 2)
+4:00  -> 7:00  -> 10:00       (1.75 -> 2.5)
 """
 
 
 def even_more_duration(duration):
-    if duration == 1:
-        return 1
-    elif duration == 2.25:
-        return 4.5
-    elif duration == 2.14:
-        return 4.29
-    elif duration == 2.045:
-        return 4.09
-    elif duration == 2:
-        return 4
-    elif duration == 3.34:
-        return 5.34
-    elif duration == 1.67:
-        return 2.67
-    elif duration == 1.5:
-        return 2
-    elif duration == 1.75:
-        return 2.5
+    if duration == 0:
+        return 0
+    elif duration == 14400:
+        return 19200
+    elif duration == 9600:
+        return 14400
+    elif duration == 6000:
+        return 9600
+    elif duration == 3600:
+        return 6000
+    elif duration == 1800:
+        return 3600
+    elif duration == 900:
+        return 1800
     else:
         raise Exception(f"Couldn't process potion duration {duration}!")
+
+def number_to_roman(nbr):
+    romans = [
+        (1000, "M"), (900, "CM"), (500, "D"), (400, "CD"),
+        (100, "C"), (90, "XC"), (50, "L"), (40, "XL"),
+        (10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I")
+    ]
+
+    result = ""
+    for value, letter in romans:
+        result += letter * (nbr // value)
+        nbr %= value
+
+    return result
+
+def tick_to_minutes(nbr):
+    seconds = math.floor((nbr / 20) % 60)
+    minutes = math.floor(nbr / 1200)
+
+    return f"{minutes:02d}:{seconds:02d}"

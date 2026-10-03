@@ -1,2 +1,7 @@
-data merge entity @s {width: 1.01f, height: 0.5f, Tags: ["es.ritual_interaction"], response: 1b}
-scoreboard players operation @s es.table_id = #search es.table_id
+item fill entity @s container.* from block ~ ~ ~ container.*
+data remove block ~ ~ ~ Items
+setblock ~ ~ ~ minecraft:air strict
+setblock ~ ~ ~ minecraft:barrel strict
+item fill block ~ ~ ~ container.* from entity @s container.*
+data remove entity @s Items
+kill @s

@@ -1,0 +1,25 @@
+{
+  "parent": "effect_steal:main/obtain_alchemy_table",
+  "display": {
+    "icon": {
+      "id": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:swiftness"
+        }
+      }
+    },
+    "title": "You're too slow!",
+    "description": [
+      {
+        "text": "Brew your first potion using the alchemy table's improved brewing speed.",
+        "color": "gold"
+      }
+    ]
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

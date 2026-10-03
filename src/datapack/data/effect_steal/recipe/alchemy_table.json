@@ -1,0 +1,44 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "show_notification": true,
+    "category": "misc",
+    "pattern": [
+        "BWB",
+        "DPD",
+        "ICI"
+    ],
+    "key": {
+        "B": "minecraft:glass_bottle",
+        "W": "#minecraft:wool",
+        "D": "minecraft:diamond",
+        "P": "minecraft:brewing_stand",
+        "I": "minecraft:iron_block",
+        "C": "minecraft:barrel"
+    },
+    "result": {
+        "id": "minecraft:cod_spawn_egg",
+        "components": {
+            "minecraft:entity_data": {
+                "id": "minecraft:marker",
+                "Tags": ["es.place.alchemy_table"]
+            },
+            "minecraft:item_model": "effect_steal:block/alchemy_table",
+            "minecraft:lore": [
+                [
+                    {"text":"","italic":false,"color":"white"},
+                    {"text":"\uE001","font":"effect_steal:main"},
+                    {"text":" Effect Steal SMP ","color":"blue"},
+                    {"text":"\uE001","font":"effect_steal:main"}
+                ],
+                "",
+                {"text": "A luxary brewing station, once", "color": "gold", "italic": false},
+                {"text": "utilized by the leading alchemists.", "color": "gold", "italic": false},
+                "",
+                {"text": "Can be used to brew potions", "color": "green", "italic": false},
+                {"text": "and unlock permanent effects.", "color": "green", "italic": false}
+            ],
+            "minecraft:item_name": {"text":"Alchemy Table"},
+            "minecraft:custom_data": {"effect_steal:alchemy_table": true}
+        }
+    }
+}

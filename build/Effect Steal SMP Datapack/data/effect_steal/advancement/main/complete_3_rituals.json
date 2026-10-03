@@ -1,0 +1,77 @@
+{
+  "parent": "effect_steal:main/start_ritual",
+  "display": {
+    "icon": {
+      "id": "minecraft:player_head",
+      "components": {
+        "minecraft:enchantment_glint_override": true
+      }
+    },
+    "title": {
+      "text": "Expert alchemist",
+      "color": "light_purple"
+    },
+    "description": [
+      {
+        "text": "Complete 3 rituals\n\n",
+        "color": "gold"
+      },
+      {
+        "text": "Rewards:\n",
+        "color": "dark_gray"
+      },
+      {
+        "text": " 1x player head",
+        "color": "green"
+      }
+    ],
+    "frame": "challenge"
+  },
+  "criteria": {
+    "1": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "es.rituals_done": {
+              "min": 1
+            }
+          }
+        }
+      }
+    },
+    "2": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "es.rituals_done": {
+              "min": 2
+            }
+          }
+        }
+      }
+    },
+    "3": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_scores",
+          "entity": "this",
+          "scores": {
+            "es.rituals_done": {
+              "min": 3
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "loot": "minecraft:entities/player"
+  }
+}

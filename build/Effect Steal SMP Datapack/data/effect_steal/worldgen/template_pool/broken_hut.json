@@ -1,0 +1,14 @@
+{
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "effect_steal:broken_hut",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "effect_steal:nether_brewery",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 8,
+    "separation": 6,
+    "spread_type": "linear",
+    "salt": 6554626
+  }
+}

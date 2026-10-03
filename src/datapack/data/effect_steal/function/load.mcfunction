@@ -41,6 +41,8 @@ scoreboard objectives add es.animation dummy
 # Ritual
 scoreboard objectives add es.player_heads dummy
 
+scoreboard objectives add es.rituals_done dummy
+
 
 # -------------------------------
 #  Enable library features                            

@@ -70,7 +70,10 @@
                     "es.place.alchemy_table"
                   ]
                 },
-                "minecraft:item_model": "effect_steal:block/alchemy_table"
+                "minecraft:item_model": "effect_steal:block/alchemy_table",
+                "minecraft:custom_data": {
+                  "effect_steal:alchemy_table": true
+                }
               }
             }
           ]

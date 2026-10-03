@@ -26,6 +26,7 @@ scoreboard objectives add es.effect_level dummy
 scoreboard objectives add es.owner_id dummy
 scoreboard objectives add es.animation dummy
 scoreboard objectives add es.player_heads dummy
+scoreboard objectives add es.rituals_done dummy
 function #theblackswitch:v2.0/slow_tick/enable
 function #theblackswitch:v2.0/easing/enable
 function #theblackswitch:v2.0/clear_item/enable

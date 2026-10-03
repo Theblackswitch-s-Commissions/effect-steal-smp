@@ -24,7 +24,7 @@ execute:
     raw execute if slots block ~ ~ ~ effect_steal:alchemy_table/has_faulty_slot run return run function effect_steal:alchemy_table/gui/update
     execute if score @s es.button_click matches 1.. run return run function effect_steal:alchemy_table/gui/update
 
-execute if score @s es.brew_progress matches 1.. run function effect_steal:alchemy_table/gui/brewing/show_progress
+execute if score @s es.brew_progress matches 1.. if block ~ ~ ~ minecraft:barrel[open=true] run function effect_steal:alchemy_table/gui/brewing/show_progress
 
 # Handle gui closing
 execute if score @s es.owner_id matches 0.. if block ~ ~ ~ minecraft:barrel[open=false] run function effect_steal:alchemy_table/handle_owner/reset_owner

@@ -1,6 +1,12 @@
-say Ritual INIT!
+say Ritual INITI!
 
 scoreboard players operation #search es.table_id = @s es.table_id
+scoreboard players operation #search tbs.ID = @s es.owner_id
+
+# Grant the advancement
+execute as @a[predicate=theblackswitch:__version__/__patch__/player_id/match_search]:
+    advancement grant @s only effect_steal:main/start_ritual
+    scoreboard players add @s es.rituals_done 1
 
 # Sound effects
 playsound minecraft:block.trial_spawner.open_shutter master @a ~ ~ ~ 1 2

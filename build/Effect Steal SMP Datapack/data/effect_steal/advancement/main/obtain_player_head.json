@@ -1,0 +1,30 @@
+{
+  "parent": "effect_steal:main/obtain_alchemy_table",
+  "display": {
+    "icon": {
+      "id": "minecraft:player_head"
+    },
+    "title": "For your own good",
+    "description": [
+      {
+        "text": "Obtain 5 player heads",
+        "color": "gold"
+      }
+    ]
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:player_head",
+            "count": {
+              "min": 5
+            }
+          }
+        ]
+      }
+    }
+  }
+}

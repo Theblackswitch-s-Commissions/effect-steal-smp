@@ -1,4 +1,5 @@
 import effect_steal:const as const
+import math
 
 
 item modify entity @s container.0 {
@@ -12,12 +13,48 @@ item modify entity @s container.0 {
 #  LVL 1                            
 # -------------------------------
 
-execute if score #bliss_level temp matches 1: 
+execute if score #bliss_level temp matches 1:
     for potion in const.potions:
 
-        # increase duration
-        execute if items entity @s container.0 *[minecraft:potion_contents={"potion": potion.id}]:
-            item modify entity @s container.0 {"type":"set_components","components":{"minecraft:potion_duration_scale": potion.target_duration}}
+        # Calculate the potion duration
+        duration = potion.target_duration
+
+        # Calculate the id for the translation key
+        potion_id = potion.id.removeprefix("long_")
+        potion_id = potion_id.removeprefix("strong_")
+
+        # Don't upgrade the level
+        amplifier = potion.level
+
+        # Potion effect text color
+        effect_color = "blue"
+        if potion.type == "negative":
+            effect_color = "red"
+
+        # Modify each potion type into the correct one
+        for potion_item in ["potion", "splash_potion", "lingering_potion"]:
+            execute if items entity @s container.0 f'minecraft:{potion_item}[minecraft:potion_contents={{"potion": {potion.id}}}]':
+                item modify entity @s container.0 [
+                    {
+                        "type": "set_components",
+                        "components":{
+                            "minecraft:potion_contents":{"potion": potion.id, "custom_effects":[{"id":f"minecraft:{potion.effect_name}","duration": duration,"amplifier": amplifier}]},
+                            "minecraft:custom_name": {"translate": f"item.minecraft.{potion_item}.effect.{potion_id}", "italic": false},
+                            "minecraft:tooltip_display":{hidden_components:["potion_contents"]},
+                            "minecraft:lore": [
+                                [
+                                    {"text":"","italic":false,"color":"white"},
+                                    {"text":"\uE001","font":"effect_steal:main"},
+                                    {"text":" Effect Steal SMP ","color":"blue"},
+                                    {"text":"\uE001","font":"effect_steal:main"}
+                                ],
+                                [{"translate": f"effect.minecraft.{potion.effect_name}", "color": effect_color, "italic": false}, {"text": f" {const.number_to_roman(amplifier+ 1)} "}, {"text": f"({const.tick_to_minutes(duration)})"}],
+                                {"text": "", "italic": false},
+                                {"text": "This potion got upgraded by chemical bliss!", "color":"gold","italic": false}
+                            ]
+                        }
+                    }
+                ]
 
 # -------------------------------
 #  LVL 2                            
@@ -26,46 +63,45 @@ execute if score #bliss_level temp matches 1:
 execute if score #bliss_level temp matches 2:
     for potion in const.potions:
 
-        # increase duration
-        execute if items entity @s container.0 *[minecraft:potion_contents={"potion": potion.id}]:
-            item modify entity @s container.0 {"type":"set_components","components":{"minecraft:potion_duration_scale": potion.target_duration}}
+        # Calculate the potion duration
+        duration = potion.target_duration
 
-        # increase level
+        # Calculate the id for the translation key
+        potion_id = potion.id.removeprefix("long_")
+        potion_id = potion_id.removeprefix("strong_")
+
+        # Upgrade only positive effects
         if potion.type == "positive":
-            potion_id = potion.id.removeprefix("long_")
-            potion_id = potion_id.removeprefix("strong_")
+            amplifier = potion.target_level
+        else:
+            amplifier = potion.level
 
-            amplifier = potion.target_level - 1
+        # Potion effect text color
+        effect_color = "blue"
+        if potion.type == "negative":
+            effect_color = "red"
 
-            execute if items entity @s container.0 minecraft:potion[minecraft:potion_contents={"potion": potion.id}]:
+        # Modify each potion type into the correct one
+        for potion_item in ["potion", "splash_potion", "lingering_potion"]:
+            execute if items entity @s container.0 f'minecraft:{potion_item}[minecraft:potion_contents={{"potion": {potion.id}}}]':
                 item modify entity @s container.0 [
                     {
                         "type": "set_components",
                         "components":{
-                            "minecraft:potion_contents":{"custom_effects":[{"id":f"minecraft:{potion.effect_name}","duration": potion.duration,"amplifier": amplifier}]},
-                            "minecraft:custom_name": {"translate": f"item.minecraft.potion.effect.{potion_id}", "italic": false}
-                        }
-                    }
-                ]
-
-            execute if items entity @s container.0 minecraft:splash_potion[minecraft:potion_contents={"potion": potion.id}]:
-                item modify entity @s container.0 [
-                    {
-                        "type": "set_components",
-                        "components":{
-                            "minecraft:potion_contents":{"custom_effects":[{"id":f"minecraft:{potion.effect_name}","duration": potion.duration,"amplifier": amplifier}]},
-                            "minecraft:custom_name": {"translate": f"item.minecraft.splash_potion.effect.{potion_id}", "italic": false}
-                        }
-                    }
-                ]
-
-            execute if items entity @s container.0 minecraft:lingering_potion[minecraft:potion_contents={"potion": potion.id}]:
-                item modify entity @s container.0 [
-                    {
-                        "type": "set_components",
-                        "components":{
-                            "minecraft:potion_contents":{"custom_effects":[{"id":f"minecraft:{potion.effect_name}","duration": potion.duration,"amplifier": amplifier}]},
-                            "minecraft:custom_name": {"translate": f"item.minecraft.lingering_potion.effect.{potion_id}", "italic": false}
+                            "minecraft:potion_contents":{"potion": potion.id, "custom_effects":[{"id":f"minecraft:{potion.effect_name}","duration": duration,"amplifier": amplifier}]},
+                            "minecraft:custom_name": {"translate": f"item.minecraft.{potion_item}.effect.{potion_id}", "italic": false},
+                            "minecraft:tooltip_display":{hidden_components:["potion_contents"]},
+                            "minecraft:lore": [
+                                [
+                                    {"text":"","italic":false,"color":"white"},
+                                    {"text":"\uE001","font":"effect_steal:main"},
+                                    {"text":" Effect Steal SMP ","color":"blue"},
+                                    {"text":"\uE001","font":"effect_steal:main"}
+                                ],
+                                [{"translate": f"effect.minecraft.{potion.effect_name}", "color": effect_color, "italic": false}, {"text": f" {const.number_to_roman(amplifier+ 1)} "}, {"text": f"({const.tick_to_minutes(duration)})"}],
+                                {"text": "", "italic": false},
+                                {"text": "This potion got upgraded by chemical bliss!", "color":"gold","italic": false}
+                            ]
                         }
                     }
                 ]
@@ -77,47 +113,42 @@ execute if score #bliss_level temp matches 2:
 execute if score #bliss_level temp matches 3:
     for potion in const.potions:
 
-        # increase duration
+        # Calculate the potion duration
         duration = const.even_more_duration(potion.target_duration)
 
-        execute if items entity @s container.0 *[minecraft:potion_contents={"potion": potion.id}]:
-            item modify entity @s container.0 {"type":"set_components","components":{"minecraft:potion_duration_scale": duration}}
-
-        # increase level
+        # Calculate the id for the translation key
         potion_id = potion.id.removeprefix("long_")
         potion_id = potion_id.removeprefix("strong_")
 
-        amplifier = potion.target_level - 1
+        # Amplifier is here the default potion level
+        amplifier = potion.target_level
 
-        execute if items entity @s container.0 minecraft:potion[minecraft:potion_contents={"potion": potion.id}]:
-            item modify entity @s container.0 [
-                {
-                    "type": "set_components",
-                    "components":{
-                        "minecraft:potion_contents":{"custom_effects":[{"id":f"minecraft:{potion.effect_name}","duration": potion.duration,"amplifier": amplifier}]},
-                        "minecraft:custom_name": {"translate": f"item.minecraft.potion.effect.{potion_id}", "italic": false}
-                    }
-                }
-            ]
+        # Potion effect text color
+        effect_color = "blue"
+        if potion.type == "negative":
+            effect_color = "red"
 
-        execute if items entity @s container.0 minecraft:splash_potion[minecraft:potion_contents={"potion": potion.id}]:
-            item modify entity @s container.0 [
-                {
-                    "type": "set_components",
-                    "components":{
-                        "minecraft:potion_contents":{"custom_effects":[{"id":f"minecraft:{potion.effect_name}","duration": potion.duration,"amplifier": amplifier}]},
-                        "minecraft:custom_name": {"translate": f"item.minecraft.splash_potion.effect.{potion_id}", "italic": false}
+        # Modify each potion type into the correct one
+        for potion_item in ["potion", "splash_potion", "lingering_potion"]:
+            execute if items entity @s container.0 f'minecraft:{potion_item}[minecraft:potion_contents={{"potion": {potion.id}}}]':
+                item modify entity @s container.0 [
+                    {
+                        "type": "set_components",
+                        "components":{
+                            "minecraft:potion_contents":{"potion": potion.id, "custom_effects":[{"id":f"minecraft:{potion.effect_name}","duration": duration,"amplifier": amplifier}]},
+                            "minecraft:custom_name": {"translate": f"item.minecraft.{potion_item}.effect.{potion_id}", "italic": false},
+                            "minecraft:tooltip_display":{hidden_components:["potion_contents"]},
+                            "minecraft:lore": [
+                                [
+                                    {"text":"","italic":false,"color":"white"},
+                                    {"text":"\uE001","font":"effect_steal:main"},
+                                    {"text":" Effect Steal SMP ","color":"blue"},
+                                    {"text":"\uE001","font":"effect_steal:main"}
+                                ],
+                                [{"translate": f"effect.minecraft.{potion.effect_name}", "color": effect_color, "italic": false}, {"text": f" {const.number_to_roman(amplifier+ 1)} "}, {"text": f"({const.tick_to_minutes(duration)})"}],
+                                {"text": "", "italic": false},
+                                {"text": "This potion got upgraded by chemical bliss!", "color":"gold","italic": false}
+                            ]
+                        }
                     }
-                }
-            ]
-
-        execute if items entity @s container.0 minecraft:lingering_potion[minecraft:potion_contents={"potion": potion.id}]:
-            item modify entity @s container.0 [
-                {
-                    "type": "set_components",
-                    "components":{
-                        "minecraft:potion_contents":{"custom_effects":[{"id":f"minecraft:{potion.effect_name}","duration": potion.duration,"amplifier": amplifier}]},
-                        "minecraft:custom_name": {"translate": f"item.minecraft.lingering_potion.effect.{potion_id}", "italic": false}
-                    }
-                }
-            ]
+                ]
