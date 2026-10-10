@@ -1,0 +1,25 @@
+{
+  "parent": "effect_steal:main/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:enchanted_golden_apple"
+    },
+    "title": "Roses are red, violets are blue, no my bad effects are gone too",
+    "description": [
+      {
+        "text": "Clear a random bad effect by consuming an enchanted golden apple!",
+        "color": "gold"
+      }
+    ]
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "effect_steal:alchemy_table"
+    ]
+  }
+}

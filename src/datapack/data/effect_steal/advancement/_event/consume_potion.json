@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "test": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "items": "#minecraft:brewing_potion_inputs"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "effect_steal:_event/consume_potion"
+    }
+}

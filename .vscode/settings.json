@@ -4,7 +4,8 @@
     "mc-dp-icons.tickFunctionNames": [
         "alchemy_table/tick",
         "ritual/tick",
-        "animation/tick"
+        "animation/tick",
+        "potions/tick"
     ],
     "mc-dp-icons.loadFunctionNames": [
         "alchemy_table/load",

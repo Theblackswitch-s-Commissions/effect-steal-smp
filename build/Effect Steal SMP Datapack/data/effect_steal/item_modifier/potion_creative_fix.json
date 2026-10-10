@@ -1,0 +1,23 @@
+{
+  "type": "sequence",
+  "functions": [
+    {
+      "type": "minecraft:copy_custom_data",
+      "source": {
+        "type": "minecraft:storage",
+        "source": "effect_steal:potion"
+      },
+      "ops": [
+        {
+          "source": "id",
+          "target": "es_potion_id",
+          "op": "replace"
+        }
+      ]
+    },
+    {
+      "type": "set_count",
+      "count": 1
+    }
+  ]
+}
