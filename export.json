@@ -13,5 +13,10 @@
         "enabled": false,
         "folders": []
     },
-    "hashes": []
+    "hashes": [
+        {
+            "version": "0.0.0a",
+            "sha1": "15860dc5e026c22504c7a9de8d86ff374ea07606"
+        }
+    ]
 }

@@ -7,7 +7,9 @@
         "name": "Effect Steal SMP Datapack"
     },
     "resource_pack": {
-        "load": ["src/resourcepack"],
+        "load": [
+            "src/resourcepack"
+        ],
         "name": "Effect Steal SMP Resourcepack"
     },
     "pipeline": [
@@ -17,7 +19,7 @@
     "id": "effect_steal",
     "name": "effect_steal",
     "description": "",
-    "version": "1.0.0a",
+    "version": "0.0.0a",
     "require": [
         "bolt",
         "bolt_native_macros",
