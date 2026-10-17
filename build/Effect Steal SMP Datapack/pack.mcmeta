@@ -1,14 +1,14 @@
 {
   "pack": {
     "min_format": [
-      101,
-      1
+      121,
+      0
     ],
     "max_format": [
-      101,
-      1
+      121,
+      0
     ],
-    "description": "Version: 1.0.0a"
+    "description": "An smp where everything is centered around permanent effects!"
   },
   "overlays": {
     "entries": [

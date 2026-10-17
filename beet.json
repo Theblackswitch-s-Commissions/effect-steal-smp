@@ -18,8 +18,8 @@
     ],
     "id": "effect_steal",
     "name": "effect_steal",
-    "description": "",
-    "version": "0.0.0a",
+    "description": "An smp where everything is centered around permanent effects!",
+    "version": "1.0.0a",
     "require": [
         "bolt",
         "bolt_native_macros",
